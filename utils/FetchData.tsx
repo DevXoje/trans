@@ -1,8 +1,10 @@
 // import 'server-only'
 // import { cache } from 'react'
 import { Experience } from '@/lib/models/Experience'
+import { Skill } from '@/lib/models/Skill'
+import { Project } from '@/lib/models/Project'
 
-export const preload = () => {
+export const preloadExperiences = () => {
   void getExperiences()
 }
 
@@ -13,4 +15,68 @@ export const getExperiences = async () => { // cache(async () => {
     { title: 'titulo2', description: 'Lorem, ipsum dolor sit amet', rangeTime: { from: 5, to: 10 } }
   ]
   return experiences
+}
+
+export const preloadSkills = () => {
+  void getSkills()
+}
+
+export const getSkills = async () => { // cache(async () => {
+  const skills: Skill[] = [
+    { title: 'Angular', rating: 4 },
+    { title: 'React', rating: 3 },
+    { title: 'Vue', rating: 2 },
+    { title: 'Laravel', rating: 1 }
+  ]
+  return skills
+}
+
+export const preloadProjects = () => {
+  void getProjects()
+}
+
+export const getProjects = async () => { // cache(async () => {
+  const projects: Project[] = [
+    {
+      title: 'titulo 1',
+      description: 'Lizards are a widespread group of squamate reptiles, with over 6,000\n' +
+                '              species, ranging across all continents except Antarctica',
+      image: { src: 'project1.png', alt: '' },
+      links: {
+        source: { href: '', content: 'LinkCode' },
+        webSite: { href: '', content: 'LinkWeb' }
+      }
+    },
+    {
+      title: 'titulo 2',
+      description: 'Lizards are a widespread group of squamate reptiles, with over 6,000\n' +
+                '              species, ranging across all continents except Antarctica',
+      image: { src: 'project1.png', alt: 'Lizards are a widespread group of squamate reptiles' },
+      links: {
+        source: { href: '', content: 'LinkCode' },
+        webSite: { href: '', content: 'LinkWeb' }
+      }
+    },
+    {
+      title: 'titulo 3',
+      description: 'Lizards are a widespread group of squamate reptiles, with over 6,000\n' +
+                '              species, ranging across all continents except Antarctica',
+      image: { src: 'project1.png', alt: 'Lizards are a widespread group of squamate reptiles' },
+      links: {
+        source: { href: '', content: 'LinkCode' },
+        webSite: { href: '', content: 'LinkWeb' }
+      }
+    },
+    {
+      title: 'titulo 4',
+      description: 'Lizards are a widespread group of squamate reptiles, with over 6,000\n' +
+                '              species, ranging across all continents except Antarctica',
+      image: { src: 'project1.png', alt: 'Lizards are a widespread group of squamate reptiles' },
+      links: {
+        source: { href: '', content: 'LinkCode' },
+        webSite: { href: '', content: 'LinkWeb' }
+      }
+    }
+  ]
+  return projects
 }

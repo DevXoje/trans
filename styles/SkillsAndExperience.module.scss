@@ -1,0 +1,19 @@
+.wrapper {
+  justify-content: space-between;
+
+  .left_item {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+  }
+
+  .right_item {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+
+  }
+
+}

@@ -1,5 +1,5 @@
 'use client'
-import i18n from '../i18n'
+import i18n from '../../i18n'
 import * as React from 'react'
 import { useEffect, useState } from 'react'
 import { Box, Skeleton, ToggleButton, ToggleButtonGroup } from '@mui/material'
@@ -30,14 +30,14 @@ const LanguageSwitcher = () => {
       return (
         <ToggleButton key={locale} value={locale} aria-label='left aligned'>
           <Link href='/' locale={locale} legacyBehavior>
-            <Image src={`/${locale}.svg`} alt='language english' width={30} height={30} priority />
+            <Image src={`/icons/${locale}.svg`} alt='language english' width={30} height={30} priority />
           </Link>
         </ToggleButton>
       /* //<MenuItem value={name} key={name}>
-                    <Link href="/" locale={name} legacyBehavior>
-                    {name}
-                  </Link>
-                //</MenuItem> */
+                                        <Link href="/" locale={name} legacyBehavior>
+                                        {name}
+                                      </Link>
+                                    //</MenuItem> */
       )
     })
 

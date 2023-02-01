@@ -1,0 +1,12 @@
+.gallery_projects{
+  &__title{
+    text-align: center;
+  }
+}
+.project{
+  border: 10px solid green;
+  &__title{
+    border: 10px solid red;
+
+  }
+}
