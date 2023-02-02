@@ -1,12 +1,13 @@
 .aboutMe {
   //background-color: #383b3d;
-  //background-color:var(--mui-palette-primary-main);
+  background-color: var(--mui-palette-primary-main);
+  color: var(--mui-palette-primary-contrastText);
   //color: #f7f8f9;
   //color: var(--mui-palette-primary-contrastText);
-  padding: 10px;
+  padding: 20px;
   max-width: 490px;
   margin: 0 auto;
-  gap: 30px;
+  //gap: 30px;
   @media (min-width: 900px) {
     max-width: none;
     &__image {
@@ -16,33 +17,47 @@
       height: 130px;*/
     }
   }
+
   &__image {
-    padding: 0 !important;
+    max-width: 100%;
+    height: auto;
   }
 
   &__content {
 
-    .title{
-      font-size:2.34rem;
-      line-height: 1.2;
+    .title {
+      font-size: 2.34rem;
+      font-weight: 300;
     }
-    .subtitle{
 
+    .subtitle {
+      font-size: 1.640625rem;
     }
-    .title, .subtitle{
+
+    .title, .subtitle {
       text-transform: capitalize;
       margin-bottom: 0.5rem;
       font-weight: 300;
       line-height: 1.2;
     }
-    .description{}
-   .button{
-     color: var(--mui-palette-primary-contrastText);
-     border-color: var(--mui-palette-primary-contrastText);
-     :hover{
-       text-decoration: none;
 
-     }
-   }
+    .description {
+      margin-bottom: 1rem;
+      color: #f8f9fa;
+      word-wrap: break-word;
+      font-size: .9375rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .button {
+      color: var(--mui-palette-primary-contrastText);
+      border-color: var(--mui-palette-primary-contrastText);
+
+      :hover {
+        text-decoration: none;
+
+      }
+    }
   }
 }

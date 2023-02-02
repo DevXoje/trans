@@ -5,23 +5,11 @@ import { jsx } from '@emotion/react/macro'
 import Experience from '@/components/molecules/Experience'
 import useTranslation from 'next-translate/useTranslation'
 import { linkedinUrl } from '@/lib/porfolioData'
+import styles from '@/styles/Experience.module.scss'
 import JSX = jsx.JSX;
 
 preloadExperiences()
-/*
-const renderExperiences = experiences.map(({ title, description, rangeTime }, index) => (
-  <li key={index}>
-    <Typography variant='h3'>
-      {title}
-    </Typography>
-    <Typography variant='subtitle1'>
-      {rangeTime.from} {rangeTime.to ? `- ${rangeTime.to}` : '- current'}
-    </Typography>
-    <Typography variant='body1'>
-      {description}
-    </Typography>
-  </li>
-)) */
+
 const Experiences = () => {
   const { t } = useTranslation('experiences')
 
@@ -35,23 +23,21 @@ const Experiences = () => {
     setExperiences(renderExperiences)
   })
   return (
-    <div>
-      <div className='card-body'>
-        <Typography variant='h2'>
-          {t('title')}
-        </Typography>
-        <ul>
-          {/* List Item Experience */}
-          {experiences}
-        </ul>
+    <section className={styles.gallery_experiences}>
+      <Typography variant='h2' color='text.secondary' className={styles.experience__title}>
+        {t('title')}
+      </Typography>
+      <ul>
+        {/* List Item Experience */}
+        {experiences}
+      </ul>
 
-        <Link href={linkedinUrl}>
-          <Button variant='outlined'>
-            {t('button')}
-          </Button>
-        </Link>
-      </div>
-    </div>
+      <Link href={linkedinUrl}>
+        <Button variant='outlined'>
+          {t('button')}
+        </Button>
+      </Link>
+    </section>
   )
 }
 export default Experiences

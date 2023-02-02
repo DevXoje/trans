@@ -1,19 +1,22 @@
 .wrapper {
-  justify-content: space-between;
 
-  .left_item {
+  .left_item, .right_item {
+    width: 100%;
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-100%);
     transition: all 1s;
+
+  }
+
+  .left_item {
+    transform: translateX(-100%);
   }
 
   .right_item {
-    opacity: 0;
-    filter: blur(5px);
+
     transform: translateX(100%);
-    transition: all 1s;
 
   }
 
 }
+

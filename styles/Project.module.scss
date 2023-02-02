@@ -1,12 +1,25 @@
-.gallery_projects{
-  &__title{
+.gallery_projects {
+  background-color: var(--mui-palette-primary-main);
+  color: var(--mui-palette-primary-contrastText);
+  padding: 20px;
+
+  &__title {
+
     text-align: center;
+    font-weight: 300;
+    line-height: 45px;
+    font-size: 2.34rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
   }
 }
-.project{
-  border: 10px solid green;
-  &__title{
-    border: 10px solid red;
+
+.project {
+  color: var(--mui-palette-text-secondary);
+
+  &__title {
+
+    text-transform: capitalize;
 
   }
 }

@@ -4,12 +4,12 @@ import JSX = jsx.JSX;
 
 export type Project = {
     title: string;
-    image:{src:string, alt:string};
-    description:string;
+    image: { src: string, alt: string };
+    description: string;
 
-    links:{
-        source:LinkProps&{content:string|JSX.Element},
-        webSite:LinkProps&{content:string|JSX.Element}
+    links: {
+        source: LinkProps & { content: string | JSX.Element },
+        webSite: LinkProps & { content: string | JSX.Element }
     }
-
+    isComplete: boolean;
 }

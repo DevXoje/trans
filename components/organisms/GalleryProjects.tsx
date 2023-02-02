@@ -1,12 +1,14 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Grid, Typography } from '@mui/material'
-import styles from '../../styles/Project.module.scss'
+import { Button, Grid, Typography } from '@mui/material'
+import styles from '@/styles/Project.module.scss'
 import Project from '@/components/molecules/Project'
 import { getProjects, preloadProjects } from '@/utils/FetchData'
 import { jsx } from '@emotion/react'
 import useTranslation from 'next-translate/useTranslation'
+import { linkedinUrl } from '@/lib/porfolioData'
+import Link from 'next/link'
 import JSX = jsx.JSX;
 
 preloadProjects()
@@ -27,11 +29,17 @@ export default function GalleryProjects () {
   return (
     <section className={styles.gallery_projects}>
       <header>
-        <Typography variant='h2' className={styles.gallery_projects__title}>{t('title')}</Typography>
+        <Typography variant='h2' className={styles.gallery_projects__title}>{t('my projects')}</Typography>
       </header>
       <Grid container spacing={3} className='projects'>
         {projects}
       </Grid>
+      <Link href={linkedinUrl}>
+        <Button variant='contained'>
+          {t('more projects')}
+        </Button>
+      </Link>
     </section>
+
   )
 }

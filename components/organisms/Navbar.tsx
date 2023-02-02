@@ -1,7 +1,7 @@
 'use client'
 import { AppBar, Toolbar, Typography } from '@mui/material'
 import React from 'react'
-import styles from '@styles/Navbar.module.scss'
+import styles from '@/styles/Navbar.module.scss'
 import LanguageSwitcher from '@/components/atoms/LanguageSwitcher'
 
 // const Navbar = ({ t }:{t:TFunction}) => {

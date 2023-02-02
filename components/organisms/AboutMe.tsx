@@ -10,16 +10,13 @@ const AboutMe = () => {
 
   return (
     <Grid container component='section' className={styles.aboutMe}>
-      <Grid item xs={12} md={6} className={styles.aboutMe__image}>
+      <Grid item xs={12} md={6}>
         <Image
-          src='/images/person.jpeg'
+          src='/images/person1.jpeg'
           alt={t('image_alt')}
           width={468}
           height={1000}
-          style={{
-            maxWidth: '100%',
-            height: 'auto'
-          }}
+          className={styles.aboutMe__image}
           priority
         />
       </Grid>

@@ -1,0 +1,34 @@
+.gallery_experiences {
+  padding: 20px;
+
+  &__title {
+    font-size: 2.34375rem;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--mui-palette-text-secondary);
+    text-align: left;
+  }
+}
+
+.experience {
+  color: var(--mui-palette-text-secondary);
+  margin-bottom: 20px;
+
+  &__title {
+    font-size: 1.640625rem;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  &__date {
+    color: var(--mui-palette-secondary-main);
+
+  }
+
+  &__description {
+
+  }
+}

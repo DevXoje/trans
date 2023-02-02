@@ -38,15 +38,15 @@ export const preloadProjects = () => {
 export const getProjects = async () => { // cache(async () => {
   const projects: Project[] = [
     {
-      title: 'titulo 1',
-      description: 'Lizards are a widespread group of squamate reptiles, with over 6,000\n' +
-                '              species, ranging across all continents except Antarctica',
-      image: { src: 'project1.png', alt: '' },
+      title: 'my portfolio',
+      description: 'On this site, you will find a selection of my standout projects and a little about my experience and skills.',
+      image: { src: 'project1.png', alt: 'thumbnail of my portfolio' },
       links: {
         source: { href: '', content: 'LinkCode' },
         webSite: { href: '', content: 'LinkWeb' }
-      }
-    },
+      },
+      isComplete: true
+    }/*,
     {
       title: 'titulo 2',
       description: 'Lizards are a widespread group of squamate reptiles, with over 6,000\n' +
@@ -55,28 +55,10 @@ export const getProjects = async () => { // cache(async () => {
       links: {
         source: { href: '', content: 'LinkCode' },
         webSite: { href: '', content: 'LinkWeb' }
-      }
-    },
-    {
-      title: 'titulo 3',
-      description: 'Lizards are a widespread group of squamate reptiles, with over 6,000\n' +
-                '              species, ranging across all continents except Antarctica',
-      image: { src: 'project1.png', alt: 'Lizards are a widespread group of squamate reptiles' },
-      links: {
-        source: { href: '', content: 'LinkCode' },
-        webSite: { href: '', content: 'LinkWeb' }
-      }
-    },
-    {
-      title: 'titulo 4',
-      description: 'Lizards are a widespread group of squamate reptiles, with over 6,000\n' +
-                '              species, ranging across all continents except Antarctica',
-      image: { src: 'project1.png', alt: 'Lizards are a widespread group of squamate reptiles' },
-      links: {
-        source: { href: '', content: 'LinkCode' },
-        webSite: { href: '', content: 'LinkWeb' }
-      }
-    }
+      },
+      isComplete: false
+
+    } */
   ]
   return projects
 }

@@ -20,20 +20,20 @@ const SkillsAndExperience = () => {
     })
 
     /* opacity: 1;
-        filter: blur(0);
-        transform: translateX(0); */
+                                    filter: blur(0);
+                                    transform: translateX(0); */
   }
   useEffect(() => {
     addShow()
   }, [])
   return (
     <Grid container className={styles.wrapper}>
-      <Grid item sm={3} className={styles.left_item} ref={leftItem}>
+      <Grid item sm={12} md={6} className={styles.left_item} ref={leftItem}>
         <Card variant='outlined'>
           <Skills />
         </Card>
       </Grid>
-      <Grid item sm={8} className={styles.right_item} ref={rightItem}>
+      <Grid item sm={12} md={6} className={styles.right_item} ref={rightItem}>
         <Card variant='outlined'>
           <Experiences />
         </Card>
