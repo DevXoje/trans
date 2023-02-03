@@ -1,9 +1,6 @@
 {
   "title": "Example with-next-translate",
   "powered": "Powered by",
-  "alt": "Vercel logo",
-  "titulo1": "bif title",
-  "titulo2": "big title 2",
-  "Lorem, ipsum dolor sit amet": "placeholder"
+  "alt": "Vercel logo"
 }
 

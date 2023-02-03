@@ -1,19 +1,21 @@
-import { Typography } from '@mui/material'
 import { jsx } from '@emotion/react'
 import React, { useState } from 'react'
 import { getSkills, preloadSkills } from '@/utils/FetchData'
 import Skill from '@/components/organisms/Skill'
-import styles from '@/styles/Skills.module.scss'
+import useTranslation from 'next-translate/useTranslation'
+import Section from '@/components/molecules/Section'
 import JSX = jsx.JSX;
 
 preloadSkills()
 const Skills = () => {
   const [skills, setSkills] = useState<JSX.Element[]>([])
+  const { t } = useTranslation('skills')
+
   const renderSkills: JSX.Element[] = []
   getSkills().then((skills) => {
     for (const skill of skills) {
       renderSkills.push(
-        <li key={skill.title}>
+        <li key={skill.title} style={{ listStyle: 'none' }}>
           <Skill skill={skill} />
         </li>
       )
@@ -22,14 +24,11 @@ const Skills = () => {
   })
 
   return (
-    <section className={styles.gallery_skills}>
-      <Typography variant='h2' className={styles.gallery_skills__title}>Skills</Typography>
-      {/* <Suspense fallback={<div>Loading...</div>}> */}
+    <Section title={t('skills')}>
       <ul>
         {skills}
       </ul>
-      {/* </Suspense> */}
-    </section>
+    </Section>
   )
 }
 

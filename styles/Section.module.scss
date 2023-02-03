@@ -1,0 +1,35 @@
+.section {
+  color: var(--mui-palette-text-secondary);
+  padding: 20px;
+  margin-bottom: 20px;
+
+  &.withContrast {
+    background-color: var(--mui-palette-primary-main);
+    color: var(--mui-palette-text-primary);
+
+    .section__title {
+      // color: var(--mui-palette-text-primary);
+    }
+
+    .section__content {
+      color: var(--mui-palette-common-white);
+      
+      // color: var(--mui-palette-text-primary);
+    }
+
+  }
+
+  &__title {
+    font-size: 2.34375rem;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    text-align: left;
+    text-transform: capitalize;
+  }
+
+  &__content {
+
+  }
+}
+

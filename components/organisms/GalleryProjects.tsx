@@ -1,45 +1,44 @@
-'use client'
-
-import React, { useState } from 'react'
-import { Button, Grid, Typography } from '@mui/material'
+import React, { useEffect, useState } from 'react'
+import { Button, Grid } from '@mui/material'
 import styles from '@/styles/Project.module.scss'
-import Project from '@/components/molecules/Project'
 import { getProjects, preloadProjects } from '@/utils/FetchData'
 import { jsx } from '@emotion/react'
-import useTranslation from 'next-translate/useTranslation'
 import { linkedinUrl } from '@/lib/porfolioData'
 import Link from 'next/link'
+import useTranslation from 'next-translate/useTranslation'
+import Project from '@/components/molecules/Project'
+import Section from '@/components/molecules/Section'
 import JSX = jsx.JSX;
 
 preloadProjects()
 export default function GalleryProjects () {
   const [projects, setProjects] = useState<JSX.Element[]>([])
-  const renderProjects: JSX.Element[] = []
-  const { t } = useTranslation('projects')
+  const { t } = useTranslation('gallery_projects')
+  useEffect(() => { // Todo: se ejecuta 2 veces
+    const renderProjects: JSX.Element[] = []
 
-  getProjects().then((projects) => {
-    for (const project of projects) {
-      renderProjects.push(
-        <Grid item xs={12} sm={4} key={project.title} className='hidden project'>
-          <Project project={project} />
-        </Grid>)
-      setProjects(renderProjects)
-    }
-  })
+    getProjects().then((projects) => {
+      for (const project of projects) {
+        renderProjects.push(
+          <Grid item xs={12} sm={4} key={project.title}>
+            <Project project={project} />
+          </Grid>)
+        setProjects(renderProjects)
+      }
+    })
+  }, [])
+
   return (
-    <section className={styles.gallery_projects}>
-      <header>
-        <Typography variant='h2' className={styles.gallery_projects__title}>{t('my projects')}</Typography>
-      </header>
-      <Grid container spacing={3} className='projects'>
+    <Section withContrast title={t('my projects')}>
+      <Grid container spacing={3}>
         {projects}
       </Grid>
       <Link href={linkedinUrl}>
-        <Button variant='contained'>
+        <Button variant='outlined' className={styles.gallery_projects__button}>
           {t('more projects')}
         </Button>
       </Link>
-    </section>
+    </Section>
 
   )
 }

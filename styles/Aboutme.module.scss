@@ -1,20 +1,15 @@
 .aboutMe {
-  //background-color: #383b3d;
   background-color: var(--mui-palette-primary-main);
-  color: var(--mui-palette-primary-contrastText);
-  //color: #f7f8f9;
-  //color: var(--mui-palette-primary-contrastText);
   padding: 20px;
   max-width: 490px;
-  margin: 0 auto;
-  //gap: 30px;
+  margin: 20px auto;
+  // color: #f8f9fa;
+
   @media (min-width: 900px) {
+
     max-width: none;
     &__image {
-      //max-width: 200px;
       max-width: 336px;
-      /*width: 200px;
-      height: 130px;*/
     }
   }
 
@@ -43,7 +38,6 @@
 
     .description {
       margin-bottom: 1rem;
-      color: #f8f9fa;
       word-wrap: break-word;
       font-size: .9375rem;
       font-weight: 400;

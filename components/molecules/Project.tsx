@@ -1,5 +1,5 @@
 import { Project as ProjectModel } from '@/lib/models/Project'
-import { Button, Card, CardActions, CardContent, CardMedia, Link, Skeleton, Typography } from '@mui/material'
+import { Button, Card, CardActions, CardContent, CardMedia, Skeleton, Typography } from '@mui/material'
 import styles from '../../styles/Project.module.scss'
 import useTranslation from 'next-translate/useTranslation'
 /* import { BsFillFileCodeFill } from 'react-icons/bs'
@@ -8,39 +8,89 @@ import { MdWeb } from 'react-icons/md' */
 export default function Project ({ project }: { project: ProjectModel }) {
   const { title, description, image } = project
   const { t } = useTranslation('projects')
+  const ProjectComplete = () => {
+    return (
+      <Card sx={{ maxWidth: 345 }} className={`${styles.project} ${!project.isComplete ? styles.incomplete : ''}`}>
+        <CardMedia
+          component='img'
+          alt={t(image.alt)}
+          height='140'
+          image={image.src}
+        />
+        <CardContent>
+          <Typography gutterBottom variant='h5' component='div' className={styles.project__title}>
+            {t(title)}
+
+          </Typography>
+          <Typography variant='body2'>
+            {t(description)}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button
+            variant='contained' size='small'
+            className={styles.project__button}
+            href='https://wwww.code.com '
+          >{/* endIcon={<BsFillFileCodeFill />} */}
+            {t('source code')}
+
+            {/* <Link href={links.source.content}>Code</Link> */}
+          </Button>
+          <Button
+            variant='contained' size='small'
+            className={styles.project__button}
+            href='https://wwww.code.com'
+          > {/* endIcon={<MdWeb />} */}
+            {t('web site')}
+
+          </Button>
+        </CardActions>
+      </Card>
+
+    )
+  }
+  const ProjectIncomplete = () => {
+    return (
+      <Card sx={{ maxWidth: 345 }} className={styles.project}>
+        <Skeleton variant='rectangular' width={210} height={118} />
+
+        <CardContent>
+          <Typography gutterBottom variant='h5' component='div' className={styles.project__title}>
+            {t(title)}
+
+          </Typography>
+          <Typography variant='body2'>
+            {/* {t(description)} */}
+            joder no quiere
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button
+            variant='contained' size='small'
+            className={styles.project__button}
+            href='https://wwww.code.com '
+          >{/* endIcon={<BsFillFileCodeFill />} */}
+            {t('source code')}
+            {/* <Link href={links.source.content}>Code</Link> */}
+          </Button>
+          <Button
+            variant='contained' size='small'
+            className={styles.project__button}
+            href='https://wwww.code.com'
+            disabled
+          > {/* endIcon={<MdWeb />} */}{t('web site')}
+          </Button>
+        </CardActions>
+      </Card>
+    )
+  }
+
   return (
     project
-      ? (
-        <Card sx={{ maxWidth: 345 }} className={styles.project}>
-          <CardMedia
-            component='img'
-            alt={t(image.alt)}
-            height='140'
-            image={image.src}
-          />
-          <CardContent>
-            <Typography gutterBottom variant='h5' component='div' className={styles.project__title}>
-              {t(title)}
-
-            </Typography>
-            <Typography variant='body2'>
-              {/* {t(description)} */}
-              joder no quiere
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button variant='contained' size='small'>{/* endIcon={<BsFillFileCodeFill />} */}
-              <Link href='https://wwww.code.com' color='inherit'>´{t('source code')}</Link>
-              {/* <Link href={links.source.content}>Code</Link> */}
-            </Button>
-            <Button variant='contained' size='small'> {/* endIcon={<MdWeb />} */}{t('web site')}</Button>
-          </CardActions>
-        </Card>
+      ? (<ProjectComplete />
+    // (project.isComplete) ? (<ProjectComplete />) : <ProjectIncomplete />
         )
       : (<ProjectSkeleton />)
   )
 }
-
-function ProjectSkeleton () {
-  return (<Skeleton variant='rectangular' width={210} height={118} />)
-}
+const ProjectSkeleton = () => <Skeleton variant='rectangular' width={210} height={118} />

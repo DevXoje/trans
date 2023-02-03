@@ -1,17 +1,17 @@
-import { Button, Link, Typography } from '@mui/material'
+import { Button, Link } from '@mui/material'
 import React, { useState } from 'react'
 import { getExperiences, preloadExperiences } from '@/utils/FetchData'
 import { jsx } from '@emotion/react/macro'
 import Experience from '@/components/molecules/Experience'
 import useTranslation from 'next-translate/useTranslation'
 import { linkedinUrl } from '@/lib/porfolioData'
-import styles from '@/styles/Experience.module.scss'
+import Section from '@/components/molecules/Section'
 import JSX = jsx.JSX;
 
 preloadExperiences()
 
 const Experiences = () => {
-  const { t } = useTranslation('experiences')
+  const { t } = useTranslation('gallery_experiences')
 
   const [experiences, setExperiences] = useState<JSX.Element[]>([])
   const renderExperiences: JSX.Element[] = []
@@ -23,21 +23,16 @@ const Experiences = () => {
     setExperiences(renderExperiences)
   })
   return (
-    <section className={styles.gallery_experiences}>
-      <Typography variant='h2' color='text.secondary' className={styles.experience__title}>
-        {t('title')}
-      </Typography>
+    <Section title={t('experiences')}>
       <ul>
-        {/* List Item Experience */}
         {experiences}
       </ul>
-
       <Link href={linkedinUrl}>
         <Button variant='outlined'>
-          {t('button')}
+          {t('know more')}
         </Button>
       </Link>
-    </section>
+    </Section>
   )
 }
 export default Experiences

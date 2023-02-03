@@ -4,7 +4,7 @@ const i18n = {
   defaultLocale: 'es',
   pages: {
     '*': ['common'],
-    '/': ['home', 'about', 'experiences', 'projects']
+    '/': ['home', 'about', 'experiences', 'projects', 'gallery_experiences', 'gallery_projects', 'skills']
   }
 }
 

@@ -4,7 +4,7 @@ import { Typography } from '@mui/material'
 import styles from '@/styles/Experience.module.scss'
 
 const Experience = ({ experience }: { experience: Experience }) => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation('experiences')
   const { title, description, rangeTime } = experience
   return (
     <li className={styles.experience}>

@@ -23,8 +23,8 @@ export const theme = extendTheme({
     dark: {
       palette: {
         text: {
-          primary: '#f8f9fa',
-          secondary: '#373a3c'
+          primary: '#373a3c',
+          secondary: '#f8f9fa'
         },
         primary: {
           main: '#929495ff'

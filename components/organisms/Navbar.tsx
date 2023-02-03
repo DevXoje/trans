@@ -3,6 +3,7 @@ import { AppBar, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 import styles from '@/styles/Navbar.module.scss'
 import LanguageSwitcher from '@/components/atoms/LanguageSwitcher'
+import ModeSwitcher from '@/components/atoms/ModeSwitcher'
 
 // const Navbar = ({ t }:{t:TFunction}) => {
 const Navbar = () => {
@@ -14,7 +15,7 @@ const Navbar = () => {
             Xoje
           </Typography>
           {/* <LinkList params={params} /> */}
-          {/* <ModeSwitcher /> */}
+          <ModeSwitcher />
           <LanguageSwitcher />
         </Toolbar>
       </AppBar>

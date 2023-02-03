@@ -12,14 +12,29 @@
     margin-bottom: 0.5rem;
     text-transform: capitalize;
   }
+
+  &__button {
+    margin: 20px auto 0 auto;
+
+    color: var(--mui-palette-text-primary);
+    border-color: var(--mui-palette-text-primary);
+  }
 }
 
 .project {
+  padding-bottom: 20px;
   color: var(--mui-palette-text-secondary);
 
+
   &__title {
-
     text-transform: capitalize;
-
   }
+
+  &__button {
+    background-color: var(--mui-palette-secondary-main);
+  }
+}
+
+.incomplete {
+  border: 10px solid red !important;
 }

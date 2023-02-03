@@ -11,8 +11,17 @@ export const preloadExperiences = () => {
 export const getExperiences = async () => { // cache(async () => {
   // let res = use( fetch("https://external-service.com/data", {headers: {authorization: process.env.API_KEY,},}));return res.json();
   const experiences: Experience[] = [
-    { title: 'titulo1', description: 'Lorem, ipsum dolor sit amet', rangeTime: { from: 5, to: 10 } },
-    { title: 'titulo2', description: 'Lorem, ipsum dolor sit amet', rangeTime: { from: 5, to: 10 } }
+    {
+      title: 'robotic system integrators',
+      // description: 'As an industrial robotic integrator with experience in Kuka and welding, I have programmed and configured robots to automate manufacturing processes in the automotive industry. With skills in robotics, electronics and mechanics, I have worked in a team environment to achieve efficient and high-quality solutions. My experience has improved productivity and reduced costs, giving me a sense of professional accomplishment.',
+      description: 'experience_description1',
+      rangeTime: { from: 2022, to: 2022 }
+    },
+    {
+      title: 'frontend developer',
+      description: 'experience_description2',
+      rangeTime: { from: 2022, to: 2022 }
+    }
   ]
   return experiences
 }
@@ -24,8 +33,12 @@ export const preloadSkills = () => {
 export const getSkills = async () => { // cache(async () => {
   const skills: Skill[] = [
     { title: 'Angular', rating: 4 },
+    { title: 'angular material', rating: 4 },
+    { title: 'ng-bootstrap', rating: 4 },
     { title: 'React', rating: 3 },
+    { title: 'Next', rating: 3 },
     { title: 'Vue', rating: 2 },
+    { title: 'Quasar', rating: 2 },
     { title: 'Laravel', rating: 1 }
   ]
   return skills
@@ -39,26 +52,25 @@ export const getProjects = async () => { // cache(async () => {
   const projects: Project[] = [
     {
       title: 'my portfolio',
-      description: 'On this site, you will find a selection of my standout projects and a little about my experience and skills.',
+      description: 'project_description1',
       image: { src: 'project1.png', alt: 'thumbnail of my portfolio' },
       links: {
         source: { href: '', content: 'LinkCode' },
         webSite: { href: '', content: 'LinkWeb' }
       },
       isComplete: true
-    }/*,
+    },
     {
-      title: 'titulo 2',
-      description: 'Lizards are a widespread group of squamate reptiles, with over 6,000\n' +
-                '              species, ranging across all continents except Antarctica',
-      image: { src: 'project1.png', alt: 'Lizards are a widespread group of squamate reptiles' },
+      title: 'doors ch',
+      description: 'this project blabla',
+      image: { src: 'project2.png', alt: 'thumbnail of door website' },
       links: {
         source: { href: '', content: 'LinkCode' },
         webSite: { href: '', content: 'LinkWeb' }
       },
       isComplete: false
 
-    } */
+    }
   ]
   return projects
 }

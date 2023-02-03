@@ -1,9 +1,5 @@
 {
   "title": "Demostració with-next-translate",
   "powered": "Powered by",
-  "alt": "Vercel logo",
-  "titulo1": "titulazo",
-  "titulo2": "titulazo 2",
-
-  "Lorem, ipsum dolor sit amet": "relleno"
+  "alt": "Vercel logo"
 }

@@ -1,15 +1,14 @@
-'use client'
+import React, { useState } from 'react'
+import Section from '@/components/molecules/Section'
+import styles from '@/styles/Aboutme.module.scss'
 
 import { Button, Grid, Link, Typography } from '@mui/material'
-import styles from '@/styles/Aboutme.module.scss'
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
-import { useState } from 'react'
-import Section from '@/components/molecules/Section'
 
-const AboutMe = () => {
-  const [showMore, setShowMore] = useState(false)
+const SectionExtra = () => {
   const { t } = useTranslation('about')
+  const [showMore, setShowMore] = useState(false)
 
   return (
     <Section withContrast>
@@ -24,12 +23,11 @@ const AboutMe = () => {
             priority
           />
         </Grid>
-        <Grid item xs={12} md={6} className={styles.aboutMe__content}>
-          <Typography variant='h2' className={styles.title}>Jose Vilches</Typography>
-          <Typography variant='h4' className={styles.subtitle}>{t('subtitle')}</Typography>
+        <Grid item xs={12} md={6}>
+          <Typography variant='h2'>Jose Vilches</Typography>
+          <Typography variant='h4'>{t('subtitle')}</Typography>
           <Typography
             variant='body1'
-            className={styles.description}
             paragraph
           >
             {showMore ? t('body') : t('body').substring(0, 251)}
@@ -41,5 +39,4 @@ const AboutMe = () => {
     </Section>
   )
 }
-
-export default AboutMe
+export default SectionExtra
