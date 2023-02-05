@@ -1,16 +1,4 @@
 .gallery_skills {
-  padding: 20px;
-
-  &__title {
-    font-size: 2.34375rem;
-    margin-bottom: 0.5rem;
-    font-weight: 300;
-    line-height: 1.2;
-    color: var(--mui-palette-text-secondary);
-    text-align: left;
-    text-transform: capitalize;
-    
-  }
 }
 
 .skill {
@@ -18,13 +6,11 @@
 
   &__title {
     font-size: 1.171875rem;
-    //margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
     font-weight: 300;
     line-height: 1.2;
-    color: var(--mui-palette-text-secondary);
     text-align: left;
     text-transform: capitalize;
-
   }
 
   &__slider {

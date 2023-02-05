@@ -2,7 +2,6 @@
 // import { cache } from 'react'
 import { Experience } from '@/lib/models/Experience'
 import { Skill } from '@/lib/models/Skill'
-import { Project } from '@/lib/models/Project'
 
 export const preloadExperiences = () => {
   void getExperiences()
@@ -42,35 +41,4 @@ export const getSkills = async () => { // cache(async () => {
     { title: 'Laravel', rating: 1 }
   ]
   return skills
-}
-
-export const preloadProjects = () => {
-  void getProjects()
-}
-
-export const getProjects = async () => { // cache(async () => {
-  const projects: Project[] = [
-    {
-      title: 'my portfolio',
-      description: 'project_description1',
-      image: { src: '/project1.webp', alt: 'thumbnail of my portfolio' },
-      links: {
-        source: { href: '', content: 'LinkCode' },
-        webSite: { href: '', content: 'LinkWeb' }
-      },
-      isComplete: true
-    },
-    {
-      title: 'doors ch',
-      description: 'this project blabla',
-      image: { src: '/project2.webp', alt: 'thumbnail of door website' },
-      links: {
-        source: { href: '', content: 'LinkCode' },
-        webSite: { href: '', content: 'LinkWeb' }
-      },
-      isComplete: false
-
-    }
-  ]
-  return projects
 }

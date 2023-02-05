@@ -1,17 +1,5 @@
 .gallery_projects {
-  background-color: var(--mui-palette-primary-main);
-  color: var(--mui-palette-primary-contrastText);
-  padding: 20px;
 
-  &__title {
-
-    text-align: center;
-    font-weight: 300;
-    line-height: 45px;
-    font-size: 2.34rem;
-    margin-bottom: 0.5rem;
-    text-transform: capitalize;
-  }
 
   &__button {
     margin: 0 auto;
@@ -22,6 +10,7 @@
 }
 
 .project {
+  margin-bottom: 20px;
   padding-bottom: 20px;
   color: var(--mui-palette-text-secondary);
 
@@ -32,6 +21,11 @@
 
   &__button {
     background-color: var(--mui-palette-secondary-main);
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
   }
 }
 

@@ -4,7 +4,7 @@ import JSX = jsx.JSX;
 
 export type Project = {
     title: string;
-    image: { src: string, alt: string };
+    image: { src: string, alt: string, sizes?: string, srcset?: string[] };
     description: string;
 
     links: {

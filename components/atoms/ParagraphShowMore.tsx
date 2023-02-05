@@ -12,11 +12,12 @@ const ParagraphShowMore = ({ content, className }: { content: string, className:
     const contentSnippet = content.substring(0, maxLength)
     finalContent = (
       <>
-        {showMore && !haveMaxLength ? content : contentSnippet}
+        {showMore ? content : contentSnippet}
         <Button
           variant='contained'
+          style={{ marginLeft: 10, backgroundColor: 'inherit', color: 'inherit' }}
           onClick={() => setShowMore(!showMore)}
-        >{showMore ? 'show less' : '...'}
+        >{showMore ? '^' : '...'}
         </Button>
       </>
     )

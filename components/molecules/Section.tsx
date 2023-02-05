@@ -5,8 +5,14 @@ import React from 'react'
 const Section = ({
   children,
   title,
-  withContrast
-}: { children: React.ReactNode, title?: string, withContrast?: boolean }) => {
+  withContrast,
+  titleStyle
+}: {
+    children: React.ReactNode,
+    title?: string,
+    withContrast?: boolean,
+    titleStyle?: React.CSSProperties
+}) => {
   return (
   // <Card sx={{ maxWidth: 345 }} className={`${styles.project} ${!project.isComplete ? styles.incomplete : ''}`}>
 
@@ -17,7 +23,11 @@ const Section = ({
       {(title)
         ? (
           <header>
-            <Typography variant='h2' className={styles.section__title}>
+            <Typography
+              variant='h2'
+              style={titleStyle}
+              className={styles.section__title}
+            >
               {title}
             </Typography>
           </header>)

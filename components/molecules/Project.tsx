@@ -21,9 +21,18 @@ export default function Project ({ project }: { project: ProjectModel }) {
         {/* TODO: Al cambiar de elemento para la imagen se ha descentrado */}
         {/* TODO: Y en concreto el primer proyecto falla en el lighthouse de brave */}
         <Image
-          src={image.src} alt={t(image.alt)} width={1000} height={140}
-          sizes='(max-width: 1400px) 100vw, 1400px'
+          src={image.src} alt={t(image.alt)} width={468}
+          height={1000}// 140h?
+          className={styles.project__image}
         />
+        {/* <Image
+            src={image.src}
+            alt={t(image.alt)}
+            width={468}
+            height={1000}
+            className={styles.aboutMe__image}
+            priority
+          /> */}
         <CardContent>
           <Typography gutterBottom variant='h5' component='div' className={styles.project__title}>
             {t(title)}

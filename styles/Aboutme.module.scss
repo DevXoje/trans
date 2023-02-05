@@ -1,12 +1,6 @@
 .aboutMe {
-  background-color: var(--mui-palette-primary-main);
-  padding: 20px;
   max-width: 490px;
-  margin: 20px auto;
-  // color: #f8f9fa;
-
   @media (min-width: 900px) {
-
     max-width: none;
     &__image {
       max-width: 336px;
@@ -19,7 +13,6 @@
   }
 
   &__content {
-
     .title {
       font-size: 2.34rem;
       font-weight: 300;
@@ -50,7 +43,6 @@
 
       :hover {
         text-decoration: none;
-
       }
     }
   }

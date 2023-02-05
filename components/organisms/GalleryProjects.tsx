@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Grid } from '@mui/material'
 import styles from '@/styles/Project.module.scss'
-import { getProjects, preloadProjects } from '@/utils/FetchData'
+import { getProjects, preloadProjects } from '@/utils/FetchProjects'
 import { jsx } from '@emotion/react'
 import { linkedinUrl } from '@/lib/porfolioData'
 import useTranslation from 'next-translate/useTranslation'
@@ -28,8 +28,8 @@ export default function GalleryProjects () {
   }, [])
 
   return (
-    <Section withContrast title={t('my projects')}>
-      <Grid container spacing={3}>
+    <Section withContrast title={t('my projects')} titleStyle={{ textAlign: 'center' }}>
+      <Grid container>
         {projects}
       </Grid>
       <Button
