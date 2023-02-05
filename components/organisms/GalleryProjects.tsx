@@ -4,7 +4,6 @@ import styles from '@/styles/Project.module.scss'
 import { getProjects, preloadProjects } from '@/utils/FetchData'
 import { jsx } from '@emotion/react'
 import { linkedinUrl } from '@/lib/porfolioData'
-import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
 import Project from '@/components/molecules/Project'
 import Section from '@/components/molecules/Section'
@@ -33,11 +32,14 @@ export default function GalleryProjects () {
       <Grid container spacing={3}>
         {projects}
       </Grid>
-      <Link href={linkedinUrl}>
-        <Button variant='outlined' className={styles.gallery_projects__button}>
-          {t('more projects')}
-        </Button>
-      </Link>
+      <Button
+        href={linkedinUrl}
+        target='_blank'
+        variant='outlined'
+        className={styles.gallery_projects__button}
+      >
+        {t('more projects')}
+      </Button>
     </Section>
 
   )

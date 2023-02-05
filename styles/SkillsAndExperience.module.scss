@@ -2,11 +2,10 @@
 
   .left_item, .right_item {
     width: 100%;
-    opacity: 0;
-    filter: blur(5px);
+    /*  opacity: 0;
+      filter: blur(5px);*/
     transition: all 1s;
     margin-bottom: 20px;
-
   }
 
   .left_item {
@@ -14,10 +13,29 @@
   }
 
   .right_item {
-
     transform: translateX(100%);
-
   }
-
 }
 
+.animate { //TODO: to make better performance upgrade to animation
+  opacity: 1 !important;
+  filter: blur(0) !important;
+  transform: translateX(0) !important;
+}
+
+/*
+.animate {
+  animation: slide-in 0.7s both;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1 !important;
+    filter: blur(0) !important;
+    transform: translateX(0) !important;
+  }
+}*/

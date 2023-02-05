@@ -2,6 +2,7 @@ import { Experience } from '@/lib/models/Experience'
 import useTranslation from 'next-translate/useTranslation'
 import { Typography } from '@mui/material'
 import styles from '@/styles/Experience.module.scss'
+import ParagraphShowMore from '@/components/atoms/ParagraphShowMore'
 
 const Experience = ({ experience }: { experience: Experience }) => {
   const { t } = useTranslation('experiences')
@@ -11,12 +12,11 @@ const Experience = ({ experience }: { experience: Experience }) => {
       <Typography variant='h3' className={styles.experience__title}>
         {t(title)}
       </Typography>
-      <Typography variant='subtitle1' className={styles.experience__date}>
+      <Typography variant='subtitle1' component='h4' className={styles.experience__date}>
         {rangeTime.from} {rangeTime.to ? `- ${rangeTime.to}` : '- current'}
       </Typography>
-      <Typography variant='body1' className={styles.experience__description}>
-        {t(description)}
-      </Typography>
+      <ParagraphShowMore content={t(description)} className={styles.experience__description} />
+
     </li>
 
   )

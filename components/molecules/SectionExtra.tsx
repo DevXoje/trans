@@ -33,7 +33,13 @@ const SectionExtra = () => {
             {showMore ? t('body') : t('body').substring(0, 251)}
             <button onClick={() => setShowMore(!showMore)}>{showMore ? 'show less' : 'show more'}</button>
           </Typography>
-          <Link href=''><Button variant='outlined' className={styles.button}>{t('button')}</Button></Link>
+          <Link href='' target='_blank'>
+            <Button
+              variant='outlined'
+              className={styles.button}
+            >{t('button')}
+            </Button>
+          </Link>
         </Grid>
       </Grid>
     </Section>

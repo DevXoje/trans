@@ -2,9 +2,9 @@
 
 import { Grid } from '@mui/material'
 import styles from '@/styles/SkillsAndExperience.module.scss'
+import { useEffect, useRef } from 'react'
 import Skills from '@/components/organisms/Skills'
 import Experiences from '@/components/organisms/Experiences'
-import { useEffect, useRef } from 'react'
 
 const SkillsAndExperience = () => {
   const leftItem = useRef(null)
@@ -15,15 +15,13 @@ const SkillsAndExperience = () => {
       const currentRight = rightItem.current as HTMLElement
       const items = [currentLeft, currentRight]
       items.forEach((item) => {
-        item.style.opacity = '1'
-        item.style.filter = 'blur(0)'
-        item.style.transform = 'translateX(0)'
+        item.classList.add(styles.animate)
       })
     }
 
     /* opacity: 1;
-                                                                    filter: blur(0);
-                                                                    transform: translateX(0); */
+                                                                                                filter: blur(0);
+                                                                                                transform: translateX(0); */
   }
   useEffect(() => {
     addShow()

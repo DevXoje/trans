@@ -53,7 +53,7 @@ export const getProjects = async () => { // cache(async () => {
     {
       title: 'my portfolio',
       description: 'project_description1',
-      image: { src: 'project1.png', alt: 'thumbnail of my portfolio' },
+      image: { src: '/project1.webp', alt: 'thumbnail of my portfolio' },
       links: {
         source: { href: '', content: 'LinkCode' },
         webSite: { href: '', content: 'LinkWeb' }
@@ -63,7 +63,7 @@ export const getProjects = async () => { // cache(async () => {
     {
       title: 'doors ch',
       description: 'this project blabla',
-      image: { src: 'project2.png', alt: 'thumbnail of door website' },
+      image: { src: '/project2.webp', alt: 'thumbnail of door website' },
       links: {
         source: { href: '', content: 'LinkCode' },
         webSite: { href: '', content: 'LinkWeb' }

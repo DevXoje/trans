@@ -1,7 +1,8 @@
 import { Project as ProjectModel } from '@/lib/models/Project'
-import { Button, Card, CardActions, CardContent, CardMedia, Skeleton, Typography } from '@mui/material'
+import { Button, Card, CardActions, CardContent, Skeleton, Typography } from '@mui/material'
 import styles from '../../styles/Project.module.scss'
 import useTranslation from 'next-translate/useTranslation'
+import Image from 'next/image'
 /* import { BsFillFileCodeFill } from 'react-icons/bs'
 import { MdWeb } from 'react-icons/md' */
 
@@ -11,11 +12,17 @@ export default function Project ({ project }: { project: ProjectModel }) {
   const ProjectComplete = () => {
     return (
       <Card sx={{ maxWidth: 345 }} className={`${styles.project} ${!project.isComplete ? styles.incomplete : ''}`}>
-        <CardMedia
+        {/* <CardMedia
           component='img'
           alt={t(image.alt)}
           height='140'
           image={image.src}
+        /> */}
+        {/* TODO: Al cambiar de elemento para la imagen se ha descentrado */}
+        {/* TODO: Y en concreto el primer proyecto falla en el lighthouse de brave */}
+        <Image
+          src={image.src} alt={t(image.alt)} width={1000} height={140}
+          sizes='(max-width: 1400px) 100vw, 1400px'
         />
         <CardContent>
           <Typography gutterBottom variant='h5' component='div' className={styles.project__title}>

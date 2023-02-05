@@ -1,14 +1,14 @@
 'use client'
 
-import { Button, Grid, Link, Typography } from '@mui/material'
+import { Button, Grid, Typography } from '@mui/material'
 import styles from '@/styles/Aboutme.module.scss'
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
-import { useState } from 'react'
 import Section from '@/components/molecules/Section'
+import ParagraphShowMore from '@/components/atoms/ParagraphShowMore'
+import { mailtoUrl } from '@/lib/porfolioData'
 
 const AboutMe = () => {
-  const [showMore, setShowMore] = useState(false)
   const { t } = useTranslation('about')
 
   return (
@@ -26,16 +26,16 @@ const AboutMe = () => {
         </Grid>
         <Grid item xs={12} md={6} className={styles.aboutMe__content}>
           <Typography variant='h2' className={styles.title}>Jose Vilches</Typography>
-          <Typography variant='h4' className={styles.subtitle}>{t('subtitle')}</Typography>
-          <Typography
-            variant='body1'
+          <Typography variant='h3' className={styles.subtitle}>{t('subtitle')}</Typography>
+          <ParagraphShowMore
             className={styles.description}
-            paragraph
-          >
-            {showMore ? t('body') : t('body').substring(0, 251)}
-            <button onClick={() => setShowMore(!showMore)}>{showMore ? 'show less' : 'show more'}</button>
-          </Typography>
-          <Link href=''><Button variant='outlined' className={styles.button}>{t('button')}</Button></Link>
+            content={t('body')}
+          />
+          <Button// Todo: falta que el mailto se traduzca
+            href={mailtoUrl} target='_blank' variant='outlined'
+            className={styles.button}
+          >{t('button')}
+          </Button>
         </Grid>
       </Grid>
     </Section>
