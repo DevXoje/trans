@@ -3,6 +3,7 @@ import { Slider, Typography } from '@mui/material'
 import React from 'react'
 import styles from '@/styles/Skills.module.scss'
 
+// eslint-disable-next-line no-import-assign,no-redeclare
 const Skill = ({ skill }: { skill: Skill }) => {
   const { title, rating } = skill
   return (
