@@ -7,16 +7,29 @@ import ModeSwitcher from '@/components/atoms/ModeSwitcher'
 
 // const Navbar = ({ t }:{t:TFunction}) => {
 const Navbar = () => {
+  /*  const nav = useRef<HTMLElement | undefined>(undefined)
+      useEffect(() => {
+        const navElement = nav.current as HTMLElement
+        console.log(navElement.offsetWidth)
+        console.log(navElement.classList)
+      }, [nav]) */
   return (
     <>
-      <AppBar>
-        <Toolbar className={styles.navbar}>
-          <Typography variant='h6' component='div' className={styles.navbar__title}>
+
+      <AppBar className={styles.navbar}>
+        <Toolbar component='nav' className={styles.navbar__toolbar}>
+          <Typography variant='h6' component='h1' className={styles.navbar__title}>
             Xoje
           </Typography>
           {/* <LinkList params={params} /> */}
           <ModeSwitcher />
           <LanguageSwitcher />
+          {/*  <button onClick={() => {
+            console.log(nav.current?.offsetWidth)
+            console.log(nav.current?.classList)
+          }}
+          >click
+          </button> */}
         </Toolbar>
       </AppBar>
       <Toolbar id='back-to-top-anchor' />

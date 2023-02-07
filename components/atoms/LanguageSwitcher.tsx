@@ -28,16 +28,16 @@ const LanguageSwitcher = () => {
     locales.map((locale: string) => {
       // const name = locale.split('-')[0]
       return (
-        <ToggleButton key={locale} value={locale} aria-label='left aligned'>
-          <Link href='/' locale={locale} legacyBehavior>
+        <ToggleButton key={locale} value={locale} aria-label='left aligned' sx={{ width: 'none' }}>
+          <Link href={`/${locale}`} locale={locale}>
             <Image src={`/icons/${locale}.svg`} alt='language english' width={30} height={30} priority />
           </Link>
         </ToggleButton>
       /* //<MenuItem value={name} key={name}>
-                                        <Link href="/" locale={name} legacyBehavior>
-                                        {name}
-                                      </Link>
-                                    //</MenuItem> */
+                                                                                                              <Link href="/" locale={name} legacyBehavior>
+                                                                                                              {name}
+                                                                                                            </Link>
+                                                                                                          //</MenuItem> */
       )
     })
 

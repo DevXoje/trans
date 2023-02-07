@@ -1,10 +1,9 @@
 .navbar {
-  display: flex;
-  justify-content: space-evenly;
 
-  * {
-    text-transform: capitalize;
 
+  &__toolbar {
+    display: flex;
+    justify-content: space-around;
   }
 
   &__title {

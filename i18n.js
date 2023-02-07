@@ -6,6 +6,7 @@ const i18n = {
     '*': ['common'],
     '/': ['home', 'about', 'experiences', 'projects', 'gallery_experiences', 'gallery_projects', 'skills']
   }
+  // pagesInDir: 'app'
 }
 
 module.exports = i18n
