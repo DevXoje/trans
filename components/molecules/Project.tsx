@@ -21,11 +21,14 @@ export default function Project ({ project }: { project: ProjectModel }) {
         /> */}
         {/* TODO: Al cambiar de elemento para la imagen se ha descentrado */}
         {/* TODO: Y en concreto el primer proyecto falla en el lighthouse de brave */}
-        <Image
-          src={image.src} alt={t(image.alt)} width={468}
-          height={1000}// 140h?
-          className={styles.project__image}
-        />
+
+        <div className={styles.wrapper__image}>
+          <Image
+            src={image.src} alt={t(image.alt)} width={468}
+            height={1000}// 140h?
+            className={styles.project__image}
+          />
+        </div>
         {/* <Image
             src={image.src}
             alt={t(image.alt)}
@@ -44,18 +47,20 @@ export default function Project ({ project }: { project: ProjectModel }) {
         </CardContent>
         <CardActions className={styles.project__group_buttons}>
           <Button
-            variant='contained' size='small'
+            variant='contained'
+            size='small'
             className={styles.project__button}
-            href='https://wwww.code.com '
+            href={project.links.source.href}
           >{/* endIcon={<BsFillFileCodeFill />} */}
             {t('source code')}
 
             {/* <Link href={links.source.content}>Code</Link> */}
           </Button>
           <Button
-            variant='contained' size='small'
+            variant='contained'
+            size='small'
             className={styles.project__button}
-            href='https://wwww.code.com'
+            href={project.links.webSite.href}
           > {/* endIcon={<MdWeb />} */}
             {t('web site')}
 

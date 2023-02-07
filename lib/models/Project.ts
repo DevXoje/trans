@@ -1,4 +1,3 @@
-import { LinkProps } from 'next/link'
 import { jsx } from '@emotion/react'
 import JSX = jsx.JSX;
 
@@ -8,8 +7,10 @@ export type Project = {
     description: string;
 
     links: {
-        source: LinkProps & { content: string | JSX.Element },
-        webSite: LinkProps & { content: string | JSX.Element }
+        source: { href: string, content: string | JSX.Element },
+        webSite: { href: string, content: string | JSX.Element },
+        /* source: LinkProps & { content: string | JSX.Element },
+        webSite: LinkProps & { content: string | JSX.Element } */
     }
     isComplete: boolean;
 }

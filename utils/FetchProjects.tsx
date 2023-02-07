@@ -21,7 +21,7 @@ export const getProjects = async () => {
         sizes: `(max-width: ${maxWithImage}px) 100vw, ${maxWithImage}px`
       },
       links: {
-        source: { href: '', content: 'LinkCode' },
+        source: { href: 'https://github.com/DevXoje/trans', content: 'LinkCode' },
         webSite: { href: '', content: 'LinkWeb' }
       },
       isComplete: true
@@ -46,7 +46,7 @@ export const getProjects = async () => {
 
     },
     {
-      title: 'Bibi',
+      title: 'bibi',
       description: 'this project blabla',
       image: {
         src: '/project3.webp',

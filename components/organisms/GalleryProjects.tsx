@@ -19,7 +19,7 @@ export default function GalleryProjects () {
     getProjects().then((projects) => {
       for (const project of projects) {
         renderProjects.push(
-          <Grid item xs={12} sm={3.7} md={6} lg={6} xl={6} key={project.title}>
+          <Grid item xs={12} sm={3.7} md={3.7} lg={3.7} xl={3.7} key={project.title}>
             <Project project={project} />
           </Grid>)
         setProjects(renderProjects)

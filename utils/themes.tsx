@@ -4,14 +4,14 @@ import * as React from 'react'
 * */
 export const theme = extendTheme({
   /*  breakpoints: {
-        values: {
-          xs: 0,
-          sm: 600,
-          md: 900,
-          lg: 1200,
-          xl: 1536
-        }
-      }, */
+              values: {
+                xs: 0,
+                sm: 600,
+                md: 900,
+                lg: 1200,
+                xl: 1536
+              }
+            }, */
 
   //  components
   colorSchemes: {
@@ -26,6 +26,9 @@ export const theme = extendTheme({
         },
         secondary: {
           main: '#277fe1'
+        },
+        background: {
+          paper: '#f6f7f8'
         }
       }
 
@@ -41,6 +44,9 @@ export const theme = extendTheme({
         },
         secondary: {
           main: '#277fe1'
+        },
+        background: {
+          paper: '#f6f7f8'
         }
       }
     }
