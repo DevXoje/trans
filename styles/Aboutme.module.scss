@@ -1,10 +1,10 @@
-.aboutMe {
-  max-width: 490px;
-  @media (min-width: 900px) {
-    max-width: none;
-    &__image {
-      max-width: 336px;
-    }
+.aboutMe { //TODO: hacer que los elementos hijos esten centrados
+  @media (min-width: 600px) { //$mq-sm
+    justify-content: space-between;
+  }
+  @media (min-width: 900px) { //$mq-md
+    border: 10px solid pink;
+
   }
 
   &__image {

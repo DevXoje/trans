@@ -13,8 +13,8 @@ const AboutMe = () => {
 
   return (
     <Section withContrast>
-      <Grid container>
-        <Grid item xs={12} md={6}>
+      <Grid container className={styles.aboutMe}>
+        <Grid item xs={12} sm={3} md={6} lg={6} xl={6}>
           <Image
             src='/images/person1.jpeg'
             alt={t('image_alt')}
@@ -24,7 +24,7 @@ const AboutMe = () => {
             priority
           />
         </Grid>
-        <Grid item xs={12} md={6} className={styles.aboutMe__content}>
+        <Grid item xs={12} sm={8} md={6} lg={6} xl={6} className={styles.aboutMe__content}>
           <Typography variant='h2' className={styles.title}>Jose Vilches</Typography>
           <Typography variant='h3' className={styles.subtitle}>{t('subtitle')}</Typography>
           <ParagraphShowMore

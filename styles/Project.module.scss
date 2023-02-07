@@ -1,8 +1,14 @@
 .gallery_projects {
 
+  &__list {
+    justify-content: space-between;
+  }
 
   &__button {
+    width: 200px;
+    display: block;
     margin: 0 auto;
+    text-align: center;
 
     color: var(--mui-palette-text-primary);
     border-color: var(--mui-palette-text-primary);
@@ -10,25 +16,63 @@
 }
 
 .project {
+  min-height: 400px;
   margin-bottom: 20px;
   padding-bottom: 20px;
   color: var(--mui-palette-text-secondary);
 
+  display: flex;
+  flex-direction: column;
+  //justify-content: space-between;
+  flex-flow: wrap;
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+  }
 
   &__title {
     text-transform: capitalize;
+
+
+  }
+
+  &__group_buttons {
+    justify-content: space-between;
+
+    align-self: flex-end;
   }
 
   &__button {
     background-color: var(--mui-palette-secondary-main);
   }
 
-  &__image {
-    max-width: 100%;
-    height: auto;
-  }
+
 }
 
 .incomplete {
-  border: 10px solid red !important;
+  filter: blur(3px);
+
+  &:hover {
+    filter: blur(1px);
+
+    .project__title {
+      &:before {
+        content: "en progreso";
+        text-align: center;
+        color: red;
+        background: rgba(200, 200, 200, .6);
+        font-size: 1.5em;
+        display: inline-block !important;
+        width: 250px;
+        font-weight: bolder;
+        transform: rotate(-45deg);
+        position: absolute;
+        right: -20px;
+        z-index: 10;
+      }
+    }
+
+
+  }
 }

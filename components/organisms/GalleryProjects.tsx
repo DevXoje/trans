@@ -19,7 +19,7 @@ export default function GalleryProjects () {
     getProjects().then((projects) => {
       for (const project of projects) {
         renderProjects.push(
-          <Grid item xs={12} sm={4} key={project.title}>
+          <Grid item xs={12} sm={3.7} md={6} lg={6} xl={6} key={project.title}>
             <Project project={project} />
           </Grid>)
         setProjects(renderProjects)
@@ -29,13 +29,14 @@ export default function GalleryProjects () {
 
   return (
     <Section withContrast title={t('my projects')} titleStyle={{ textAlign: 'center' }}>
-      <Grid container>
+      <Grid container className={styles.gallery_projects__list}>
         {projects}
       </Grid>
       <Button
         href={linkedinUrl}
         target='_blank'
         variant='outlined'
+        size='large'
         className={styles.gallery_projects__button}
       >
         {t('more projects')}

@@ -3,7 +3,17 @@ import * as React from 'react'
 /*
 * */
 export const theme = extendTheme({
-//  components
+  /*  breakpoints: {
+        values: {
+          xs: 0,
+          sm: 600,
+          md: 900,
+          lg: 1200,
+          xl: 1536
+        }
+      }, */
+
+  //  components
   colorSchemes: {
     light: {
       palette: {

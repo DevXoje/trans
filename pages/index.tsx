@@ -2,12 +2,10 @@ import { Experimental_CssVarsProvider as CssVarsProvider, getInitColorSchemeScri
 import { theme } from '@/utils/themes'
 import Porfolio from '@/components/porfolio'
 
-export default function Home () {
-  return (
-    <CssVarsProvider theme={theme}>
-      {getInitColorSchemeScript()}
-      <Porfolio />
-    </CssVarsProvider>
+const Home = () =>
+  <CssVarsProvider theme={theme}>
+    {getInitColorSchemeScript()}
+    <Porfolio />
+  </CssVarsProvider>
 
-  )
-}
+export default Home

@@ -1,6 +1,6 @@
 import { jsx } from '@emotion/react'
 import React, { useState } from 'react'
-import { getSkills, preloadSkills } from '@/utils/FetchData'
+import { getSkills, preloadSkills } from '@/utils/FetchSkills'
 import Skill from '@/components/organisms/Skill'
 import useTranslation from 'next-translate/useTranslation'
 import Section from '@/components/molecules/Section'

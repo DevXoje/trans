@@ -1,4 +1,11 @@
 .wrapper {
+  @media (min-width: 600px) { //$mq-sm
+    justify-content: space-between;
+  }
+  @media (min-width: 900px) { //$mq-md
+    border: 10px solid pink;
+
+  }
 
   .left_item, .right_item {
     width: 100%;

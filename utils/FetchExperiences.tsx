@@ -1,9 +1,9 @@
 // import 'server-only'
 // import { cache } from 'react'
 import { Experience } from '@/lib/models/Experience'
-import { Skill } from '@/lib/models/Skill'
 
 export const preloadExperiences = () => {
+  // eslint-disable-next-line no-void
   void getExperiences()
 }
 
@@ -23,22 +23,4 @@ export const getExperiences = async () => { // cache(async () => {
     }
   ]
   return experiences
-}
-
-export const preloadSkills = () => {
-  void getSkills()
-}
-
-export const getSkills = async () => { // cache(async () => {
-  const skills: Skill[] = [
-    { title: 'Angular', rating: 4 },
-    { title: 'angular material', rating: 4 },
-    { title: 'ng-bootstrap', rating: 4 },
-    { title: 'React', rating: 3 },
-    { title: 'Next', rating: 3 },
-    { title: 'Vue', rating: 2 },
-    { title: 'Quasar', rating: 2 },
-    { title: 'Laravel', rating: 1 }
-  ]
-  return skills
 }

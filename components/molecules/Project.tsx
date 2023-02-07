@@ -3,6 +3,7 @@ import { Button, Card, CardActions, CardContent, Skeleton, Typography } from '@m
 import styles from '../../styles/Project.module.scss'
 import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
+import ParagraphShowMore from '@/components/atoms/ParagraphShowMore'
 /* import { BsFillFileCodeFill } from 'react-icons/bs'
 import { MdWeb } from 'react-icons/md' */
 
@@ -11,7 +12,7 @@ export default function Project ({ project }: { project: ProjectModel }) {
   const { t } = useTranslation('projects')
   const ProjectComplete = () => {
     return (
-      <Card sx={{ maxWidth: 345 }} className={`${styles.project} ${!project.isComplete ? styles.incomplete : ''}`}>
+      <Card className={`${styles.project} ${!project.isComplete ? styles.incomplete : ''}`}>
         {/* <CardMedia
           component='img'
           alt={t(image.alt)}
@@ -38,11 +39,10 @@ export default function Project ({ project }: { project: ProjectModel }) {
             {t(title)}
 
           </Typography>
-          <Typography variant='body2'>
-            {t(description)}
-          </Typography>
+          <ParagraphShowMore content={t(description)} maxLength={100} />
+
         </CardContent>
-        <CardActions>
+        <CardActions className={styles.project__group_buttons}>
           <Button
             variant='contained' size='small'
             className={styles.project__button}
@@ -63,41 +63,6 @@ export default function Project ({ project }: { project: ProjectModel }) {
         </CardActions>
       </Card>
 
-    )
-  }
-  const ProjectIncomplete = () => {
-    return (
-      <Card sx={{ maxWidth: 345 }} className={styles.project}>
-        <Skeleton variant='rectangular' width={210} height={118} />
-
-        <CardContent>
-          <Typography gutterBottom variant='h5' component='div' className={styles.project__title}>
-            {t(title)}
-
-          </Typography>
-          <Typography variant='body2'>
-            {/* {t(description)} */}
-            joder no quiere
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button
-            variant='contained' size='small'
-            className={styles.project__button}
-            href='https://wwww.code.com '
-          >{/* endIcon={<BsFillFileCodeFill />} */}
-            {t('source code')}
-            {/* <Link href={links.source.content}>Code</Link> */}
-          </Button>
-          <Button
-            variant='contained' size='small'
-            className={styles.project__button}
-            href='https://wwww.code.com'
-            disabled
-          > {/* endIcon={<MdWeb />} */}{t('web site')}
-          </Button>
-        </CardActions>
-      </Card>
     )
   }
 
