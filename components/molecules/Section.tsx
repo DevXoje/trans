@@ -17,7 +17,8 @@ const Section = ({
   // <Card sx={{ maxWidth: 345 }} className={`${styles.project} ${!project.isComplete ? styles.incomplete : ''}`}>
 
     <Card
-      variant='outlined' component='section'
+      variant='outlined'
+      component='section'
       className={`${styles.section} ${withContrast ? styles.withContrast : ''}`}
     >
       {(title)

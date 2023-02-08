@@ -3,15 +3,24 @@ import * as React from 'react'
 /*
 * */
 export const theme = extendTheme({
+  components: {
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          color: 'black'
+        }
+      }
+    }
+  },
   /*  breakpoints: {
-              values: {
-                xs: 0,
-                sm: 600,
-                md: 900,
-                lg: 1200,
-                xl: 1536
-              }
-            }, */
+                      values: {
+                        xs: 0,
+                        sm: 600,
+                        md: 900,
+                        lg: 1200,
+                        xl: 1536
+                      }
+                    }, */
 
   //  components
   colorSchemes: {
