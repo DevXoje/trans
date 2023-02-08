@@ -54,14 +54,13 @@
   .wrapper__image {
     overflow: hidden;
     overflow-wrap: break-word;
-
   }
 
   .project__image {
+    transition: all 0.2s ease-in-out;
 
     &:hover {
       transform: scale(1.8);
-      transition: all 0.2s ease-in-out;
     }
 
   }

@@ -10,17 +10,24 @@ export const theme = extendTheme({
           color: 'black'
         }
       }
-    }
+    } /*
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          b
+        }
+      }
+    } */
   },
   /*  breakpoints: {
-                      values: {
-                        xs: 0,
-                        sm: 600,
-                        md: 900,
-                        lg: 1200,
-                        xl: 1536
-                      }
-                    }, */
+                                      values: {
+                                        xs: 0,
+                                        sm: 600,
+                                        md: 900,
+                                        lg: 1200,
+                                        xl: 1536
+                                      }
+                                    }, */
 
   //  components
   colorSchemes: {
@@ -38,6 +45,9 @@ export const theme = extendTheme({
         },
         background: {
           paper: '#f6f7f8'
+        },
+        Skeleton: {
+          bg: 'rgb(95, 98, 99);'
         }
       }
 
@@ -56,6 +66,9 @@ export const theme = extendTheme({
         },
         background: {
           paper: '#f6f7f8'
+        },
+        Skeleton: {
+          bg: 'rgb(95, 98, 99);'
         }
       }
     }

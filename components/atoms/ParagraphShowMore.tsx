@@ -25,7 +25,7 @@ const ParagraphShowMore = ({
           style={stylesIconButton}
           onClick={() => setShowMore(!showMore)}
         >
-          {showMore ? '^' : '...'}
+          {showMore ? '⤴️' : '⤵️'}
         </IconButton>
       </>
     )
