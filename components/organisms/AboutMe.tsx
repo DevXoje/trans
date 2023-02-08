@@ -17,8 +17,8 @@ const AboutMe = () => {
           <Image
             src='/images/person.jpeg'
             alt={t('image_alt')}
-            width={468}
-            height={1000}
+            width={600}
+            height={600}
             className={styles.aboutMe__image}
             priority
           />
