@@ -51,6 +51,7 @@ export default function Project ({ project }: { project: ProjectModel }) {
             size='small'
             className={styles.project__button}
             href={project.links.source.href}
+            target='_blank'
           >{/* endIcon={<BsFillFileCodeFill />} */}
             {t('source code')}
 
@@ -61,6 +62,7 @@ export default function Project ({ project }: { project: ProjectModel }) {
             size='small'
             className={styles.project__button}
             href={project.links.webSite.href}
+            target='_blank'
           > {/* endIcon={<MdWeb />} */}
             {t('web site')}
 

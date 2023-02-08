@@ -1,16 +1,16 @@
 'use client'
 
-import { Button, Grid, Typography } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import styles from '@/styles/Aboutme.module.scss'
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import Section from '@/components/molecules/Section'
 import ParagraphShowMore from '@/components/atoms/ParagraphShowMore'
 import { mailtoUrl } from '@/lib/porfolioData'
+import Link from 'next/link'
 
 const AboutMe = () => {
   const { t } = useTranslation('about')
-
   return (
     <Section withContrast>
       <Grid container className={styles.aboutMe}>
@@ -31,11 +31,12 @@ const AboutMe = () => {
             className={styles.description}
             content={t('body')}
           />
-          <Button// Todo: falta que el mailto se traduzca
-            href={mailtoUrl} target='_blank' variant='outlined'
+          {/*  <Button// Todo: falta que el mailto se traduzca
+            href={mailtoUrl} variant='outlined'
             className={styles.button}
           >{t('button')}
-          </Button>
+          </Button> */}
+          <Link href={mailtoUrl}>{t('button')}</Link>
         </Grid>
       </Grid>
     </Section>
