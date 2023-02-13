@@ -5,7 +5,7 @@ import styles from '@/styles/Aboutme.module.scss'
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import Section from '@/components/molecules/Section'
-import ParagraphShowMore from '@/components/atoms/ParagraphShowMore'
+import ParagraphShowMore from '@/components/atoms/ParagraphShowMore/ParagraphShowMore'
 import { mailtoUrl } from '@/lib/porfolioData'
 
 const AboutMe = () => {

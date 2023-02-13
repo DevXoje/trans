@@ -4,7 +4,7 @@ import { Button, Card, CardActions, CardContent, Skeleton, SxProps, Theme, Typog
 import styles from '../../styles/Project.module.scss'
 import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
-import ParagraphShowMore from '@/components/atoms/ParagraphShowMore'
+import ParagraphShowMore from '@/components/atoms/ParagraphShowMore/ParagraphShowMore'
 /* import { BsFillFileCodeFill } from 'react-icons/bs'
 import { MdWeb } from 'react-icons/md' */
 

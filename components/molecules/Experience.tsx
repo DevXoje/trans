@@ -2,7 +2,7 @@ import { Experience } from '@/lib/models/Experience'
 import useTranslation from 'next-translate/useTranslation'
 import { Typography } from '@mui/material'
 import styles from '@/styles/Experience.module.scss'
-import ParagraphShowMore from '@/components/atoms/ParagraphShowMore'
+import ParagraphShowMore from '@/components/atoms/ParagraphShowMore/ParagraphShowMore'
 
 // eslint-disable-next-line no-import-assign,no-redeclare
 const Experience = ({ experience }: { experience: Experience }) => {

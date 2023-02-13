@@ -37,5 +37,12 @@ const ParagraphShowMore = ({
     </Typography>
   )
 }
+/*
+ParagraphShowMore.propType = {
+  content: PropTypes.string.isRequired,
+  maxLength: PropTypes.number,
+  className: PropTypes.string
+}
+*/
 
 export default ParagraphShowMore

@@ -4,6 +4,10 @@
 .skill {
   width: 100%;
 
+  /* &:hover {
+     border: 10px solid red;
+   }*/
+
   &__title {
     font-size: 1.171875rem;
     margin-bottom: 0.5rem;
@@ -13,12 +17,13 @@
     text-transform: capitalize;
   }
 
-  &__slider {
-    padding: 0;
-    margin-bottom: 20px;
+  /*  &__slider {
+      padding: 0;
+      margin-bottom: 20px;
 
-    * {
-      color: var(--mui-palette-secondary-main);
-    }
-  }
+
+      * {
+        color: var(--mui-palette-secondary-main);
+      }
+    }*/
 }
