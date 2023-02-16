@@ -5,6 +5,9 @@
   "robotic system integrators": "integrador de sistemas roboticos",
   "experience_description1": "Soy un integrador robótico industrial con experiencia en Kuka y soldadura. He programado y configurado robots para automatizar procesos en la industria automotriz. Con habilidades en robótica, electrónica y mecánica, he trabajado en equipo para lograr soluciones eficientes y de alta calidad. Mi experiencia ha mejorado la productividad y reducido costos, brindándome una sensación de logro profesional.",
   "//Experience 2": "//Experience 2",
-  "frontend developer": "desarrollador frontend",
-  "experience_description2": "Durante el desarrollo de las practicas asociadas a mi estudios, estuve 6 meses en la empresa NTT Data, como desarrollador frontend, manteniendo aplicaciones Angular"
+  "frontend developer (Angular)": "desarrollador frontend (Angular)",
+  "experience_description2": "Durante el desarrollo de las practicas asociadas a mi estudios, estuve 6 meses en la empresa NTT Data, como desarrollador frontend, manteniendo aplicaciones Angular",
+  "//Experience 3": "//Experience 2",
+  "frontend developer (Static Web)": "desarrollador frontend (web estatica)",
+  "experience_description3": "During the development of the practices associated with my studies, I spent 6 months at the company NTT Data, as a frontend developer, maintaining Angular applications."
 }

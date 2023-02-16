@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
 import { IconButton, Typography } from '@mui/material'
 import { jsx } from '@emotion/react'
+import styles from '@/styles/ParagraphShowMore.module.scss'
 import JSX = jsx.JSX;
 
-const stylesIconButton: React.CSSProperties = {
-  boxShadow: '10px 5px 5px black',
-  color: 'inherit'
-}
 const ParagraphShowMore = ({
   content,
   maxLength = 251,
@@ -22,10 +19,10 @@ const ParagraphShowMore = ({
         {showMore ? content : contentSnippet}
         <IconButton// TODO: hacer el boton mas llamativo
           aria-label='delete' size='small'
-          style={stylesIconButton}
           onClick={() => setShowMore(!showMore)}
+          className={styles.paragraph__icon}
         >
-          {showMore ? '^' : '...'}
+          {showMore ? '⤴️' : '⤵️'}
         </IconButton>
       </>
     )
@@ -40,5 +37,12 @@ const ParagraphShowMore = ({
     </Typography>
   )
 }
+/*
+ParagraphShowMore.propType = {
+  content: PropTypes.string.isRequired,
+  maxLength: PropTypes.number,
+  className: PropTypes.string
+}
+*/
 
 export default ParagraphShowMore

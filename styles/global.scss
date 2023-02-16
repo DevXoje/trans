@@ -6,7 +6,46 @@
 }
 
 html {
-  background-color: var(--mui-palette-common-background, blue);
+  //background-color: var(--mui-palette-common-background, blue);
+  //scroll-behavior: smooth;
+
+}
+
+:root {
+  --base-color: #008000;
+  --highlight-color: #00FF00;
+  --text-color: #FFFFFF;
+  --background-color: #FFFFFF;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/*h1, h2, h3, p {
+  color: var(--text-color);
+}*/
+
+a {
+  color: var(--highlight-color);
+}
+
+button {
+  background-color: var(--text-color);
+  color: var(--base-color);
+  border: 2px solid var(--base-color);
+}
+
+.highlight {
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+}
+
+.dark-mode {
+  --background-color: #333333;
+  --text-color: #FFFFFF;
+  --highlight-color: #00FF00;
 }
 
 

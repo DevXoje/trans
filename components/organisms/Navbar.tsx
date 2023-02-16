@@ -2,17 +2,17 @@
 import { AppBar, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 import styles from '@/styles/Navbar.module.scss'
-import LanguageSwitcher from '@/components/atoms/LanguageSwitcher'
-import ModeSwitcher from '@/components/atoms/ModeSwitcher'
+import LanguageSwitcher from '@/components/atoms/LanguageSwitcher/LanguageSwitcher'
+import ModeSwitcher from '@/components/atoms/ModeSwitcher/ModeSwitcher'
 
 // const Navbar = ({ t }:{t:TFunction}) => {
 const Navbar = () => {
   /*  const nav = useRef<HTMLElement | undefined>(undefined)
-      useEffect(() => {
-        const navElement = nav.current as HTMLElement
-        console.log(navElement.offsetWidth)
-        console.log(navElement.classList)
-      }, [nav]) */
+          useEffect(() => {
+            const navElement = nav.current as HTMLElement
+            console.log(navElement.offsetWidth)
+            console.log(navElement.classList)
+          }, [nav]) */
   return (
     <>
 

@@ -1,19 +1,23 @@
 import Navbar from '@/components/organisms/Navbar'
 import { Container } from '@mui/material'
-import AboutMe from '@/components/organisms/AboutMe'
 import styles from '@/styles/Porfolio.module.scss'
-import SkillsAndExperience from '@/components/organisms/SkillsAndExperience'
+import Footer from '@/components/organisms/Footer/Footer'
+import AboutMe from '@/components/organisms/AboutMe'
 import GalleryProjects from '@/components/organisms/GalleryProjects'
+import SkillsAndExperience from '@/components/organisms/SkillsAndExperience'
+import NavFloating from '@/components/organisms/NavFloating/NavFloating'
 
 export default function Porfolio () {
   return (
     <>
       <Navbar />
+      <NavFloating />
       <Container className={styles.main}>
         <AboutMe />
         <SkillsAndExperience />
         <GalleryProjects />
       </Container>
+      <Footer />
     </>
   )
 }

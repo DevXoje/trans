@@ -1,0 +1,13 @@
+.paragraph {
+  &__icon {
+    color: inherit;
+    box-shadow: 1px 1px 3px 1px var(--mui-palette-secondary-main);
+
+    transition: .5s all ease-in-out;
+
+    &:hover {
+      box-shadow: 1px 3px 2px 3px var(--mui-palette-secondary-main);
+
+    }
+  }
+}

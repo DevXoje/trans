@@ -6,12 +6,14 @@ const Section = ({
   children,
   title,
   withContrast,
-  titleStyle
+  titleStyle,
+  id
 }: {
     children: React.ReactNode,
     title?: string,
     withContrast?: boolean,
-    titleStyle?: React.CSSProperties
+    titleStyle?: React.CSSProperties,
+    id?: string
 }) => {
   return (
   // <Card sx={{ maxWidth: 345 }} className={`${styles.project} ${!project.isComplete ? styles.incomplete : ''}`}>
@@ -20,6 +22,7 @@ const Section = ({
       variant='outlined'
       component='section'
       className={`${styles.section} ${withContrast ? styles.withContrast : ''}`}
+      id={id}
     >
       {(title)
         ? (

@@ -5,20 +5,20 @@ import styles from '@/styles/Aboutme.module.scss'
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import Section from '@/components/molecules/Section'
-import ParagraphShowMore from '@/components/atoms/ParagraphShowMore'
+import ParagraphShowMore from '@/components/atoms/ParagraphShowMore/ParagraphShowMore'
 import { mailtoUrl } from '@/lib/porfolioData'
 
 const AboutMe = () => {
   const { t } = useTranslation('about')
   return (
-    <Section withContrast>
+    <Section withContrast id='aboutme'>
       <Grid container className={styles.aboutMe}>
         <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
           <Image
-            src='/images/person.jpeg'
+            src='/images/person5.png'
             alt={t('image_alt')}
-            width={468}
-            height={1000}
+            width={600}
+            height={600}
             className={styles.aboutMe__image}
             priority
           />

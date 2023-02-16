@@ -1,3 +1,5 @@
+$min_height: 400px;
+$width: 468px;
 .gallery_projects {
 
   &__list {
@@ -17,7 +19,7 @@
 }
 
 .project {
-  min-height: 400px;
+  min-height: $min_height;
   margin-bottom: 20px;
   padding-bottom: 20px;
   color: black;
@@ -27,6 +29,8 @@
   flex-flow: wrap;
 
   &__image {
+    width: 468px;
+
     max-width: 100%;
     height: auto;
   }
@@ -42,6 +46,8 @@
   }
 
   &__button {
+    text-align: center;
+    height: 50px;
     width: 90px;
     background-color: var(--mui-palette-secondary-main);
   }
@@ -54,14 +60,13 @@
   .wrapper__image {
     overflow: hidden;
     overflow-wrap: break-word;
-
   }
 
   .project__image {
+    transition: all 0.2s ease-in-out;
 
     &:hover {
       transform: scale(1.8);
-      transition: all 0.2s ease-in-out;
     }
 
   }
@@ -75,22 +80,43 @@
     filter: blur(1px);
 
     .project__title {
-      &:before {
-        content: "en progreso";
-        text-align: center;
-        color: red;
-        background: rgba(200, 200, 200, .6);
-        font-size: 1.5em;
-        display: inline-block !important;
-        width: 250px;
-        font-weight: bolder;
-        transform: rotate(-45deg);
-        position: absolute;
-        right: -20px;
-        z-index: 10;
-      }
+    }
+
+    &:before {
+      content: "en progreso";
+      text-align: center;
+      color: red;
+      background: rgba(200, 200, 200, .6);
+      font-size: 1.5em;
+      //display: inline-block !important;
+      width: 250px;
+      font-weight: bolder;
+      transform: rotate(-45deg);
+      position: absolute;
+      right: -10px;
+      top: $min_height/2;
+      z-index: 10;
     }
 
   }
+
+}
+
+.project-skeleton {
+  &__title {
+
+  }
+
+  &__paragraph {
+    &-short {
+
+    }
+
+    &-button {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
 
 }

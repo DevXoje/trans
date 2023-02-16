@@ -16,7 +16,6 @@ const Experiences = () => {
 
   const [experiences, setExperiences] = useState<JSX.Element[]>([])
   const renderExperiences: JSX.Element[] = []
-
   getExperiences().then((experiences) => {
     for (const experience of experiences) {
       renderExperiences.push(<Experience key={experience.title} experience={experience} />)
@@ -24,7 +23,7 @@ const Experiences = () => {
     setExperiences(renderExperiences)
   })
   return (
-    <Section title={t('experiences')}>
+    <Section title={t('experiences')} id='experiences'>
       <ul className={styles.list_experiences}>
         {experiences}
       </ul>
