@@ -23,7 +23,7 @@ const Experiences = () => {
     setExperiences(renderExperiences)
   })
   return (
-    <Section title={t('experiences')}>
+    <Section title={t('experiences')} id='experiences'>
       <ul className={styles.list_experiences}>
         {experiences}
       </ul>

@@ -1,23 +1,24 @@
 'use client'
-import i18n from '../../i18n'
+import i18n from '../../../i18n'
 import * as React from 'react'
 import { useEffect, useState } from 'react'
 import { Box, Skeleton, ToggleButton, ToggleButtonGroup } from '@mui/material'
 import Link from 'next/link'
 import Image from 'next/image'
+import useTranslation from 'next-translate/useTranslation'
 
-const locales = i18n.locales
-const defaultLocale: string = i18n.defaultLocale
-
+const { locales, defaultLocale } = i18n
 // type SupportedLocales = keyof typeof locales;
 const LanguageSwitcher = () => {
+  const { lang } = useTranslation('common')
   // const [locale, setLocale] = React.useState<SupportedLocales>(defaultLocale);
   const [locale, setLocale] = React.useState<string>(defaultLocale)
 
   const [mounted, setMounted] = useState(false)
   useEffect(() => {
+    setLocale(lang)
     setMounted(true)
-  }, [])
+  }, [lang])
   if (!mounted) {
     // for server-side rendering
     // learn more at https://github.com/pacocoursey/next-themes#avoid-hydration-mismatch
@@ -33,11 +34,11 @@ const LanguageSwitcher = () => {
             <Image src={`/icons/${locale}.svg`} alt='language english' width={30} height={30} priority />
           </Link>
         </ToggleButton>
-      /* //<MenuItem value={name} key={name}>
-                                                                                                              <Link href="/" locale={name} legacyBehavior>
-                                                                                                              {name}
-                                                                                                            </Link>
-                                                                                                          //</MenuItem> */
+      /*  <MenuItem value={name} key={name}>
+                                                <Link href="/" locale={name} legacyBehavior>
+                                                    {name}
+                                                </Link>
+                                                </MenuItem> */
       )
     })
 
@@ -45,7 +46,9 @@ const LanguageSwitcher = () => {
     event: React.MouseEvent<HTMLElement>,
     newLocale: string
   ) => {
-    setLocale(newLocale)
+    if (locale !== null) {
+      setLocale(newLocale)
+    }
   }
   return (
     <>

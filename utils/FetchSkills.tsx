@@ -10,6 +10,7 @@ export const preloadSkills = () => {
 export const getSkills = async () => { // cache(async () => {
   const skills: Skill[] = [
     { title: 'Angular', rating: 4 },
+    // { title: <FaAngular />, rating: 4 },
     { title: 'angular material', rating: 4 },
     { title: 'ng-bootstrap', rating: 4 },
     { title: 'React', rating: 3 },

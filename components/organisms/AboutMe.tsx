@@ -11,11 +11,11 @@ import { mailtoUrl } from '@/lib/porfolioData'
 const AboutMe = () => {
   const { t } = useTranslation('about')
   return (
-    <Section withContrast>
+    <Section withContrast id='aboutme'>
       <Grid container className={styles.aboutMe}>
         <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
           <Image
-            src='/images/person.jpeg'
+            src='/images/person5.png'
             alt={t('image_alt')}
             width={600}
             height={600}

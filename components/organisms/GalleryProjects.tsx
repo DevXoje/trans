@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Grid } from '@mui/material'
-import styles from '@/styles/Project.module.scss'
+import styles from '@/components/molecules/Project/Project.module.scss'
 import { getProjects, preloadProjects } from '@/utils/FetchProjects'
 import { jsx } from '@emotion/react'
 import { linkedinUrl } from '@/lib/porfolioData'
 import useTranslation from 'next-translate/useTranslation'
-import Project from '@/components/molecules/Project'
+import Project from '@/components/molecules/Project/Project'
 import Section from '@/components/molecules/Section'
 import JSX = jsx.JSX;
 
@@ -28,7 +28,7 @@ export default function GalleryProjects () {
   }, [])
 
   return (
-    <Section withContrast title={t('my projects')} titleStyle={{ textAlign: 'center' }}>
+    <Section withContrast title={t('my projects')} titleStyle={{ textAlign: 'center' }} id='gallery_projects'>
       <Grid container className={styles.gallery_projects__list}>
         {projects}
       </Grid>

@@ -6,7 +6,9 @@
 }
 
 html {
-  background-color: var(--mui-palette-common-background, blue);
+  //background-color: var(--mui-palette-common-background, blue);
+  //scroll-behavior: smooth;
+
 }
 
 :root {
@@ -21,9 +23,9 @@ body {
   color: var(--text-color);
 }
 
-h1, h2, h3 {
+/*h1, h2, h3, p {
   color: var(--text-color);
-}
+}*/
 
 a {
   color: var(--highlight-color);

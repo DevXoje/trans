@@ -1,4 +1,4 @@
-export type Skill={
-    title:string;
-    rating:number
+export type Skill = {
+    title: string; // | ReactNode;
+    rating: number
 }

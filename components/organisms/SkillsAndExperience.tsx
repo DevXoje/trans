@@ -13,24 +13,22 @@ const SkillsAndExperience = () => {
     setShow(true)
   }, [])
   return (
-    <>
-      <Grid container className={styles.wrapper}>
-        <Slide direction='right' in={show} timeout={1000} mountOnEnter unmountOnExit>
-          <Grid item xs={12} sm={4} md={3.5} lg={3.5} xl={3.5} className={styles.left_item}>
-            <Skills />
-          </Grid>
-        </Slide>
-        <Slide direction='left' in={show} timeout={1000} mountOnEnter unmountOnExit>
-          <Grid
-            item xs={12} sm={7.5} md={8} lg={8}
-            xl={8} className={styles.right_item}
-          >
-            <Experiences />
-          </Grid>
-        </Slide>
+    <Grid container className={styles.wrapper}>
+      <Slide direction='right' in={show} timeout={1000} mountOnEnter unmountOnExit>
+        <Grid item xs={12} sm={4} md={3.5} lg={3.5} xl={3.5} className={styles.left_item}>
+          <Skills />
+        </Grid>
+      </Slide>
+      <Slide direction='left' in={show} timeout={1000} mountOnEnter unmountOnExit>
+        <Grid
+          item xs={12} sm={7.5} md={8} lg={8}
+          xl={8} className={styles.right_item}
+        >
+          <Experiences />
+        </Grid>
+      </Slide>
 
-      </Grid>
-    </>
+    </Grid>
   )
 }
 
