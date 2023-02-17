@@ -2,7 +2,6 @@ import { Skill } from '@/lib/models/Skill'
 import { Box, Paper, Slider, Typography } from '@mui/material'
 import React from 'react'
 import styles from '@/styles/Skills.module.scss'
-import { FaAngular } from 'react-icons/fa'
 
 function valuetext (value: number) {
   return `${value}lvl`
@@ -14,7 +13,7 @@ const Skill = ({ skill }: { skill: Skill }) => {
   const marks = [
     {
       value: 0,
-      label: <FaAngular />
+      label: '2lvl'
     },
     {
       value: 2,

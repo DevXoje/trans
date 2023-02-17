@@ -1,8 +1,17 @@
 import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
 import * as React from 'react'
-/*
-* */
+import { Roboto } from '@next/font/google'
+
+export const roboto = Roboto({
+  weight: ['300', '400', '500', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['Helvetica', 'Arial', 'sans-serif']
+})
 export const theme = extendTheme({
+  typography: {
+    fontFamily: roboto.style.fontFamily
+  },
   components: {
     MuiCard: {
       styleOverrides: {
@@ -27,14 +36,14 @@ export const theme = extendTheme({
     } */
   },
   /*  breakpoints: {
-                                                            values: {
-                                                              xs: 0,
-                                                              sm: 600,
-                                                              md: 900,
-                                                              lg: 1200,
-                                                              xl: 1536
-                                                            }
-                                                          }, */
+                                                              values: {
+                                                                xs: 0,
+                                                                sm: 600,
+                                                                md: 900,
+                                                                lg: 1200,
+                                                                xl: 1536
+                                                              }
+                                                            }, */
 
   //  components
   colorSchemes: {
