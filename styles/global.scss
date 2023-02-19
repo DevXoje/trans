@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   //background-color: var(--mui-palette-common-background, blue);
   //scroll-behavior: smooth;
@@ -21,6 +25,7 @@ html {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 /*h1, h2, h3, p {

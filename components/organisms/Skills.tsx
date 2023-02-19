@@ -24,7 +24,7 @@ const Skills = () => {
   })
 
   return (
-    <Section title={t('skills')} id='skills'>
+    <Section title={t('skill')} id='skills'>
       <ul>
         {skills}
       </ul>

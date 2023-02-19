@@ -15,6 +15,7 @@ export default function Porfolio () {
       <Box className={styles.background}>
         <Container className={styles.main}>
           <AboutMe />
+          {/* <GallerySkills /> */}
           <SkillsAndExperience />
           <GalleryProjects />
         </Container>

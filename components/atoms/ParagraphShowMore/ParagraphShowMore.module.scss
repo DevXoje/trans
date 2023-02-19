@@ -1,9 +1,17 @@
 .paragraph {
+    background: -webkit-linear-gradient(#333,#eee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   &__icon {
-    color: inherit;
-    box-shadow: 1px 1px 3px 1px var(--mui-palette-secondary-main);
+    display: block;
+    margin: 20px auto;
 
+    color: inherit;
+    width: 50px;
+    font-size: 1.4rem;
+    box-shadow: 1px 1px 3px 1px var(--mui-palette-secondary-main);
     transition: .5s all ease-in-out;
+
 
     &:hover {
       box-shadow: 1px 3px 2px 3px var(--mui-palette-secondary-main);

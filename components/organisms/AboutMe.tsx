@@ -1,15 +1,20 @@
 'use client'
 
-import { Button, Grid, Typography } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import styles from '@/styles/Aboutme.module.scss'
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import Section from '@/components/molecules/Section'
 import ParagraphShowMore from '@/components/atoms/ParagraphShowMore/ParagraphShowMore'
 import { mailtoUrl } from '@/lib/porfolioData'
+import useWindowDimensions from '@/hooks/UseWindowDimensions'
+import Link from 'next/link'
 
 const AboutMe = () => {
   const { t } = useTranslation('about')
+  const { width } = useWindowDimensions()
+  const paragraphMaxLength = width > 960 ? 1000 : 100
+  // const paragraphMaxLength = 100
   return (
     <Section withContrast id='aboutme'>
       <Grid container className={styles.aboutMe}>
@@ -27,14 +32,17 @@ const AboutMe = () => {
           <Typography variant='h2' className={styles.title}>Jose Vilches</Typography>
           <Typography variant='h3' className={styles.subtitle}>{t('subtitle')}</Typography>
           <ParagraphShowMore
-            className={styles.description}
             content={t('body')}
+            className={styles.description}
+            maxLength={paragraphMaxLength}
+
           />
-          <Button// Todo: falta que el mailto se traduzca
+          {/* <Button// Todo: falta que el mailto se traduzca
             href={mailtoUrl} variant='outlined'
             className={styles.button}
           >{t('button')}
-          </Button>
+          </Button> */}
+          <Link href={mailtoUrl} className={styles.button}>{t('button')}</Link>
           {/* <Link href={mailtoUrl}>{t('button')}</Link> */}
         </Grid>
       </Grid>

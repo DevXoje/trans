@@ -26,10 +26,13 @@
 
   &.withContrast {
     background-color: var(--mui-palette-primary-main);
-    color: var(--mui-palette-text-primary);
+    //color: var(--mui-palette-text-primary);
+    color: var(--mui-palette-common-white);
 
     .section__title {
-      color: var(--mui-palette-text-primary);
+      //color: var(--mui-palette-text-primary);
+      color: var(--mui-palette-common-white);
+
 
     }
 

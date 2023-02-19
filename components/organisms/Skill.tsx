@@ -1,5 +1,5 @@
 import { Skill } from '@/lib/models/Skill'
-import { Box, Paper, Slider, Typography } from '@mui/material'
+import { Box, Slider, Typography } from '@mui/material'
 import React from 'react'
 import styles from '@/styles/Skills.module.scss'
 
@@ -13,38 +13,36 @@ const Skill = ({ skill }: { skill: Skill }) => {
   const marks = [
     {
       value: 0,
-      label: '2lvl'
+      label: 'a'
     },
     {
       value: 2,
-      label: '2lvl'
+      label: '😁'
     },
     {
       value: 3.7,
-      label: '3.7lvl'
+      label: '🙂'
     },
     {
       value: 10,
-      label: '10lvl'
+      label: '😎'
     }
   ]
 
   return (
     <Box className={styles.skill}>
-      <Paper>
-        <Typography variant='h3' className={styles.skill__title}>{title}</Typography>
-        <Slider
-          defaultValue={rating}
-          step={1}
-          min={1}
-          max={10}
-          getAriaValueText={valuetext}
-          aria-label={title + ' rating'}
-          valueLabelDisplay='auto'
-          marks={marks}
-        />
-
-      </Paper>
+      <Typography variant='h3' className={styles.skill__title}>{title}</Typography>
+      <Slider
+        defaultValue={rating}
+        step={1}
+        min={1}
+        max={10}
+        getAriaValueText={valuetext}
+        aria-label={title + ' rating'}
+        valueLabelDisplay='auto'
+        marks={marks}
+        className={styles.skill__slider}
+      />
 
     </Box>
   )
