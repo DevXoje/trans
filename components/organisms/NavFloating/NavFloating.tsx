@@ -30,7 +30,7 @@ const handleClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, id:
   })
 }
 const NavFloating: FC = () => {
-  const { sections, actualSection, setActualSection } = useScroll()
+  const { sections, actualSection } = useScroll()
   const [show, setShow] = useState(false)
   const slideProps:SlideProps = {
     direction: 'left',

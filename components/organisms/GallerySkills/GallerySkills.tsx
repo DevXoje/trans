@@ -23,7 +23,7 @@ const GallerySkills = () => {
     }
   }, [])
 
-  const angularGroup = [{ text: 'Angular', icon: <FaAngular /> }]
+  // const angularGroup = [{ text: 'Angular', icon: <FaAngular /> }]
 
   const title = 'Skills'
   return (
