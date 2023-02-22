@@ -29,8 +29,8 @@ export const getProjects = async () => {
 
     },
     {
-      title: 'doors ch',
-      description: 'this project blabla',
+      title: 'puertas ch',
+      description: 'project_description2',
       image: {
         src: '/project2.webp',
         alt: 'thumbnail of door website',
@@ -50,7 +50,7 @@ export const getProjects = async () => {
     },
     {
       title: 'bibi',
-      description: 'this project blabla',
+      description: 'project_description3',
       image: {
         src: '/project3.webp',
         alt: 'thumbnail of bibi website',

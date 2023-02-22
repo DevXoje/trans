@@ -16,7 +16,6 @@ export default function Project ({ project }: { project: ProjectModel }) {
     return (
       <>
         <Tooltip title={t('source code')} arrow>
-
           <Button
             variant='contained'
             size='small'
@@ -26,7 +25,6 @@ export default function Project ({ project }: { project: ProjectModel }) {
             endIcon={<BsFillFileCodeFill />}
           >
             {/*  {t('source code')} */}
-
             {/* <Link href={links.source.content}>Code</Link> */}
           </Button>
         </Tooltip>
@@ -63,14 +61,11 @@ export default function Project ({ project }: { project: ProjectModel }) {
           className={styles.project__image}
         />
       </div>
-
       <CardContent>
-        <Typography gutterBottom variant='h5' component='div' className={styles.project__title}>
+        <Typography gutterBottom variant='h5' className={styles.project__title}>
           {titleTranslated}
-
         </Typography>
-        <ParagraphShowMore content={t(description)} maxLength={100} />
-
+        <ParagraphShowMore content={t(description)} maxLength={50} />
       </CardContent>
       <CardActions className={styles.project__group_buttons}>
         {getButtons(project.links.source.href, project.links.webSite.href)}

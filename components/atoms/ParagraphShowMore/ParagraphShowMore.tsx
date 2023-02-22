@@ -1,48 +1,58 @@
 import React, { useState } from 'react'
-import { IconButton, Typography } from '@mui/material'
-import { jsx } from '@emotion/react'
-import styles from '@/styles/ParagraphShowMore.module.scss'
-import JSX = jsx.JSX;
+import { Box, Button, Fade, Tooltip, Typography, Zoom } from '@mui/material'
+import styles from './ParagraphShowMore.module.scss'
+import useTranslation from 'next-translate/useTranslation'
 
-const ParagraphShowMore = ({
-  content,
-  maxLength = 251,
-  className
-}: { content: string, maxLength?: number, className?: string }) => {
-  const [showMore, setShowMore] = useState(false)
-  const haveMaxLength = content.length > maxLength
-  let finalContent: JSX.Element = <>{content}</>
-  if (haveMaxLength) {
-    const contentSnippet = content.substring(0, maxLength)
-    finalContent = (
-      <>
-        {showMore ? content : contentSnippet}
-        <IconButton// TODO: hacer el boton mas llamativo
-          aria-label='delete' size='small'
-          onClick={() => setShowMore(!showMore)}
-          className={styles.paragraph__icon}
-        >
-          {showMore ? '⤴️' : '⤵️'}
-        </IconButton>
-      </>
-    )
-  }
+const FadeComponent = ({ isActive, content }:{isActive: boolean, content: string}) =>
+  <Fade
+    in={isActive}
+        // timeout={1000}
+    unmountOnExit
+  >
+    <Box component='span'>{content}</Box>
+  </Fade>
+
+const ToggleButton = (
+  { onClick, showMore }:
+  {onClick: React.MouseEventHandler<HTMLButtonElement>, showMore:boolean}) => {
+  const { t } = useTranslation('common')
+  const tooltipTitle = showMore ? t('show less') : t('show more')
   return (
-    <Typography
-      variant='body1'
-      className={className}
-      paragraph
+    <Tooltip
+      TransitionComponent={Zoom}
+      title={tooltipTitle}
     >
-      {finalContent}
-    </Typography>
+      <Button
+        aria-label='delete'
+        size='small'
+        onClick={onClick}
+        className={styles.paragraph__icon}
+      >
+        {showMore ? '⤴️' : '⤵️'}
+      </Button>
+    </Tooltip>
   )
 }
-/*
-ParagraphShowMore.propType = {
-  content: PropTypes.string.isRequired,
-  maxLength: PropTypes.number,
-  className: PropTypes.string
-}
-*/
 
+const ParagraphShowMore = (
+  { content, maxLength = 251, className }: { content: string, maxLength?: number, className?: string }) => {
+  const [showMore, setShowMore] = useState(false)
+
+  let finalContent = <Box className={`${styles.paragraph} $                                                              {className}`}>{content}</Box>
+  const haveMaxLength = content.length > maxLength
+  if (haveMaxLength) {
+    const contentSnippet = content.substring(0, maxLength)
+    const contentExtra = content.substring(maxLength, content.length - 1)
+    finalContent = (
+      <Box className={className}>
+        <Typography className={`${styles.paragraph} ${!showMore ? styles.paragraph__gradient : ''}`}>
+          {contentSnippet}{!showMore && '...'}
+          <FadeComponent isActive={showMore} content={contentExtra} />
+        </Typography>
+        <ToggleButton showMore={showMore} onClick={() => setShowMore(!showMore)} />
+      </Box>
+    )
+  }
+  return finalContent
+}
 export default ParagraphShowMore

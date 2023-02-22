@@ -3,6 +3,7 @@
 
 .skill {
   width: 100%;
+  margin-bottom: 50px;
 
   /* &:hover {
      border: 10px solid red;
@@ -18,13 +19,17 @@
     color: black;
   }
 
-  /*  &__slider {
-      padding: 0;
-      margin-bottom: 20px;
+  &__slider {
+    .MuiSlider-markLabel {
+      border: 10px solid red !important;
+    }
 
+    .MuiSlider-markLabelActive {
+      border: 10px solid green !important;
 
-      * {
-        color: var(--mui-palette-secondary-main);
-      }
-    }*/
+    }
+
+   /*class="MuiSlider-markLabel MuiSlider-markLabelActive css-3679gv-MuiSlider-markLabel"*/
+
+  }
 }

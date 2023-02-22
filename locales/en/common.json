@@ -1,6 +1,8 @@
 {
   "title": "Example with-next-translate",
   "powered": "Powered by",
-  "alt": "Vercel logo"
+  "alt": "Vercel logo",
+  "show more": "show more",
+  "show less": "show less"
 }
 

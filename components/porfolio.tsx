@@ -1,5 +1,5 @@
 import Navbar from '@/components/organisms/Navbar'
-import { Container } from '@mui/material'
+import { Box, Container } from '@mui/material'
 import styles from '@/styles/Porfolio.module.scss'
 import Footer from '@/components/organisms/Footer/Footer'
 import AboutMe from '@/components/organisms/AboutMe'
@@ -12,11 +12,14 @@ export default function Porfolio () {
     <>
       <Navbar />
       <NavFloating />
-      <Container className={styles.main}>
-        <AboutMe />
-        <SkillsAndExperience />
-        <GalleryProjects />
-      </Container>
+      <Box className={styles.background}>
+        <Container className={styles.main}>
+          <AboutMe />
+          {/* <GallerySkills /> */}
+          <SkillsAndExperience />
+          <GalleryProjects />
+        </Container>
+      </Box>
       <Footer />
     </>
   )

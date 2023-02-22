@@ -46,12 +46,29 @@ export const getExperiences = async () => { // cache(async () => {
     },
     {
       title: 'frontend developer (Static Web)',
-      description: 'experience_description2',
+      description: 'experience_description3',
       otherTime: {
         from: new Date('2022-01-01'),
         to: new Date('2022-06-01')
       },
       thumbnail: { src: '/images/experiences/logo-calpe-publicidad.png', alt: '', width: 100, height: 100 },
+      enterprise: 'Publicidad Calpe',
+
+      address: {
+        city: 'calpe',
+        state: 'alicante',
+        country: 'españa'
+      },
+      shift: 'half'
+    },
+    {
+      title: 'hostelry (non-tech jobs)',
+      description: 'experience_description4',
+      otherTime: {
+        from: new Date('2022-01-01'),
+        to: new Date('2022-06-01')
+      },
+      thumbnail: { src: '/images/experiences/logo-nonTech.png', alt: '', width: 100, height: 100 },
       enterprise: 'Publicidad Calpe',
 
       address: {
