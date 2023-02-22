@@ -1,7 +1,14 @@
 .paragraph {
-    background: -webkit-linear-gradient(#333,#eee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  &::first-letter {
+    text-transform: capitalize;
+  }
+
+  &__gradient {
+    /*background: linear-gradient(#333,#eee);//Todo: hacer que se adapte al color de fondo
+    background-clip: text;
+   text-fill-color: transparent;*/
+  }
+
   &__icon {
     display: block;
     margin: 20px auto;
@@ -10,7 +17,7 @@
     width: 50px;
     font-size: 1.4rem;
     box-shadow: 1px 1px 3px 1px var(--mui-palette-secondary-main);
-    transition: .5s all ease-in-out;
+    transition: .3s all ease-in-out;
 
 
     &:hover {

@@ -1,4 +1,5 @@
-{
+{ "//Common": "//Common",
+  "this project blabla": "este projecto blabla",
   "web site": "web site",
   "source code": "source code",
   "//Project 1": "//Project 1",
@@ -6,9 +7,8 @@
   "project_description1": "On this site, you will find a selection of my standout projects and a little about my experience and skills.",
   "thumbnail of my portfolio": "thumbnail of my portfolio",
   "//Project 2": "//Project 2",
-  "doors ch": "doors ch",
-  "project_description2": "",
-  "this project blabla": "this project blabla",
+  "puertas ch": "puertas ch",
+  "project_description2": "This website will display the doors that are manufactured and sold in the company Puertas Ch.",
   "thumbnail of door website": "thumbnail of door website",
   "//Project 3": "//Project 3",
   "bibi": "bibi",
@@ -16,6 +16,6 @@
   "thumbnail of bibi website": "thumbnail of bibi website",
   "//Project 4": "//Project 4",
   "ecommerce": "ecommerce",
-  "project_description4": "",
+  "project_description4": "this website aims to showcase the artistic pieces developed by Bibi.",
   "thumbnail of ecommerce": "thumbnail of ecommerce"
 }

@@ -1,26 +1,40 @@
 'use client'
-import { AppBar, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 import styles from '@/styles/Navbar.module.scss'
 import LanguageSwitcher from '@/components/atoms/LanguageSwitcher/LanguageSwitcher'
 import ModeSwitcher from '@/components/atoms/ModeSwitcher/ModeSwitcher'
+import Image from 'next/image'
+import Link from 'next/link'
 
 // const Navbar = ({ t }:{t:TFunction}) => {
 const Navbar = () => {
   /*  const nav = useRef<HTMLElement | undefined>(undefined)
-          useEffect(() => {
-            const navElement = nav.current as HTMLElement
-            console.log(navElement.offsetWidth)
-            console.log(navElement.classList)
-          }, [nav]) */
+            useEffect(() => {
+              const navElement = nav.current as HTMLElement
+              console.log(navElement.offsetWidth)
+              console.log(navElement.classList)
+            }, [nav]) */
+  const logo = {
+    src: '/images/logo.png',
+    alt: 'Xoje',
+    width: 50,
+    height: 50
+  }
   return (
+
     <>
 
       <AppBar className={styles.navbar}>
         <Toolbar component='nav' className={styles.navbar__toolbar}>
-          <Typography variant='h6' component='h1' className={styles.navbar__title}>
-            Xoje
-          </Typography>
+          <Link href='/'>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', width: 150 }}>
+              <Image {...logo} />
+              <Typography variant='h6' component='h1' className={styles.navbar__title}>
+                Xoje
+              </Typography>
+            </Box>
+          </Link>
           {/* <LinkList params={params} /> */}
           <ModeSwitcher />
           <LanguageSwitcher />

@@ -13,7 +13,7 @@ const Experience = ({ experience }: { experience: Experience }) => {
   const formatTime = (time: Date) => {
     return time.toLocaleString('en', { month: 'long' }).substring(0, 3) + '. ' + time.getFullYear()
   }
-  const diffDate = Math.floor((otherTime.to.getTime() - otherTime.from.getTime()) / (1000 * 60 * 60 * 24 * 30)) + ' months'// TODO: Make units dynamic
+  const diffDate = Math.floor((otherTime.to.getTime() - otherTime.from.getTime()) / (1000 * 60 * 60 * 24 * 30)) // TODO: Make units dynamic
 
   return (
     <li className={styles.experience}>
@@ -25,10 +25,10 @@ const Experience = ({ experience }: { experience: Experience }) => {
         <Typography
           variant='subtitle1' component='h4'
           className={styles.experience__date}
-        >{enterprise} Shift {shift}
+        >{enterprise} {t('shift')} {shift}
         </Typography>
         <Typography variant='subtitle1' component='h4' className={styles.experience__date}>
-          {formatTime(otherTime.from)} {otherTime.to ? `- ${formatTime(otherTime.to)}` : '- current'} {diffDate}
+          {formatTime(otherTime.from)} {otherTime.to ? `- ${formatTime(otherTime.to)}` : '- current'} -- {diffDate} {t('months')}
         </Typography>
 
         <Typography
@@ -44,7 +44,6 @@ const Experience = ({ experience }: { experience: Experience }) => {
         />
       </div>
     </li>
-
   )
 }
 export default Experience

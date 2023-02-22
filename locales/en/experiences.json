@@ -1,14 +1,17 @@
 {
+  "//Common": "//Common",
+  "shift": "shift",
+  "months": "months",
   "//Experience 1": "//Experience 1",
   "robotic system integrators": "robotic system integrators",
-  "experience_description1": "As an industrial robotic integrator with experience in Kuka and welding, I have programmed and configured robots to automate manufacturing processes in the automotive industry. With skills in robotics, electronics and mechanics, I have worked in a team environment to achieve efficient and high-quality solutions. My experience has improved productivity and reduced costs, giving me a sense of professional accomplishment.",
+  "experience_description1": "i have worked as an Industrial Robotics Integrator, with experience in Kuka and welding. I have programmed and configured robots to automate processes in the automotive industry. My skills in robotics, electronics, and mechanics have allowed me to work as part of a team to achieve efficient and high-quality solutions. Through my work as an Industrial Robotics Integrator, I have improved productivity and reduced costs, giving me a sense of professional achievement.",
   "//Experience 2": "//Experience 2",
   "frontend developer (Angular)": "frontend developer (Angular)",
-  "experience_description2": "During the development of the practices associated with my studies, I spent 6 months at the company NTT Data, as a frontend developer, maintaining Angular applications.",
+  "experience_description2": "during my studies, I had the opportunity to work as a Frontend Developer at NTT Data. During my time at the company, I was responsible for maintaining Angular and AngularJS applications. This experience allowed me to develop skills in programming and work as part of a team to achieve the proposed objectives.",
   "//Experience 3": "//Experience 2",
   "frontend developer (Static Web)": "frontend developer (Static Web)",
-  "experience_description3": "As the final part of my training at LABORA, I started an internship atthis company, where I saw the production of projects with the basictechnologies of web development and with Wordpress.",
+  "experience_description3": "As part of my training at LABORA, I had the opportunity to complete an internship at the company. During this period, I was involved in the production of projects using basic web development technologies, as well as the implementation of projects using Wordpress. This experience allowed me to apply my knowledge and skills in a real work environment, work as part of a team, and learn from professionals in the field.",
   "//Experience 4": "//Experience 4",
   "hostelry (non-tech jobs)": "hostelry (non-tech jobs)",
-  "experience_description4": "Before starting in the technology sector, I was working in various jobsin the service sector, such as kitchen assistant, barista, dealer,bartender in a fair stall touring Spain, among others."
+  "experience_description4": "before starting my career in the technology sector, I worked in various positions in the service industry, including kitchen assistant, barista, dealer, and bartender at a fair stand traveling across Spain, among others. During my time in these jobs, I developed skills in customer service, teamwork, adaptability, and problem-solving."
 }

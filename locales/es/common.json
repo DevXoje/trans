@@ -1,5 +1,7 @@
 {
   "title": "Demostració with-next-translate",
   "powered": "Powered by",
-  "alt": "Vercel logo"
+  "alt": "Vercel logo",
+  "show more": "mostrar mas",
+  "show less": "mostrar menos"
 }
